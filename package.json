@@ -13,7 +13,8 @@
     "test": "vitest run",
     "catalog:generate": "tsx scripts/generate-catalog.ts",
     "catalog:analyze": "tsx scripts/analyze-catalog.ts",
-    "catalog:csv": "tsx scripts/export-catalog-csv.ts"
+    "catalog:csv": "tsx scripts/export-catalog-csv.ts",
+    "eval:jev": "tsx eval/jev-explore.ts"
   },
   "dependencies": {
     "@typesafe-ai/sdk": "^0.6.0",
