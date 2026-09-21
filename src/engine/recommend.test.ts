@@ -41,6 +41,9 @@ class FakeJudge implements Judge {
   async scoreCandidates(): Promise<JevScoreResult[] | null> {
     return this.results;
   }
+  async classifyReason(): Promise<null> {
+    return null;
+  }
 }
 
 describe("recommend", () => {
@@ -97,6 +100,9 @@ describe("recommend", () => {
       async scoreCandidates() {
         called = true;
         return [];
+      },
+      async classifyReason() {
+        return null;
       },
     };
     const result = await recommend(makeState({ with: "solo" }), judge, catalog);

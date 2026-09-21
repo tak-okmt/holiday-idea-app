@@ -1,8 +1,10 @@
 import { parseArgs } from "node:util";
+import type { Activity } from "../src/engine/catalog";
 import { loadCatalog } from "../src/engine/catalog";
 import { JevJudge } from "../src/engine/judge";
 import { recommend } from "../src/engine/recommend";
-import { StateSchema, type State } from "../src/engine/types";
+import { applyRejection, REJECTION_REASONS, type RejectionReason } from "../src/engine/rejection";
+import { StateSchema, type State, type Suggestion } from "../src/engine/types";
 
 try {
   process.loadEnvFile(".env.local");
@@ -34,6 +36,9 @@ const { values } = parseArgs({
     weather: { type: "string" },
     season: { type: "string" },
     rejected: { type: "string", multiple: true, default: [] },
+    "reject-id": { type: "string" },
+    "reject-reason": { type: "string" },
+    "reject-text": { type: "string" },
   },
 });
 
@@ -47,6 +52,11 @@ function printUsageAndExit(message: string): never {
   console.error("  time: within_2h | half_day | full_day");
   console.error("  budget: free | under3000 | unlimited");
   console.error("  weather(任意): sunny | cloudy | rainy");
+  console.error(
+    "\n「違うな」の再ランキングを試す場合(1回目の提案の中から --reject-id で候補を指定):"
+  );
+  console.error(`  --reject-id=act_XXX --reject-reason=<${REJECTION_REASONS.join("|")}>`);
+  console.error("  --reject-id=act_XXX --reject-text=\"お金かかりそうだしな\" (Jevのchoiceで理由を分類)");
   process.exit(1);
 }
 
@@ -67,19 +77,18 @@ if (!parsed.success) {
 
 const state = parsed.data;
 
-async function main() {
-  const catalog = loadCatalog();
-  const judge = new JevJudge();
-  const suggestions = await recommend(state, judge, catalog);
+if (values["reject-id"] && !values["reject-reason"] && !values["reject-text"]) {
+  printUsageAndExit("--reject-id 指定時は --reject-reason か --reject-text のどちらかが必要です");
+}
+if (values["reject-reason"] && !REJECTION_REASONS.includes(values["reject-reason"] as RejectionReason)) {
+  printUsageAndExit(`--reject-reason は ${REJECTION_REASONS.join("|")} のいずれかにしてください`);
+}
 
-  console.log(`条件: ${JSON.stringify(state)}`);
-  console.log();
-
+function printSuggestions(suggestions: Suggestion[]) {
   if (suggestions.length === 0) {
     console.log("条件に合う候補が見つかりませんでした。");
     return;
   }
-
   suggestions.forEach((s, i) => {
     console.log(`${i + 1}. ${s.activity.name} [${s.activity.category}]`);
     console.log(`   ${s.reason}`);
@@ -91,6 +100,42 @@ async function main() {
     );
     console.log();
   });
+}
+
+async function main() {
+  const catalog = loadCatalog();
+  const judge = new JevJudge();
+
+  console.log(`条件: ${JSON.stringify(state)}`);
+  console.log();
+  const suggestions = await recommend(state, judge, catalog);
+  printSuggestions(suggestions);
+
+  const rejectId = values["reject-id"];
+  if (!rejectId) return;
+
+  const rejected: Activity | undefined = catalog.find((a) => a.id === rejectId);
+  if (!rejected) {
+    console.error(`--reject-id=${rejectId} はカタログに見つかりません`);
+    process.exitCode = 1;
+    return;
+  }
+
+  let reason: RejectionReason | null;
+  if (values["reject-reason"]) {
+    reason = values["reject-reason"] as RejectionReason;
+  } else {
+    reason = await judge.classifyReason(values["reject-text"]!);
+    console.log(`Jevによる理由分類: ${reason ?? "分類できませんでした(却下idの除外のみ行います)"}`);
+  }
+
+  const nextState = reason ? applyRejection(state, rejected, reason) : { ...state, rejectedIds: [...(state.rejectedIds ?? []), rejected.id] };
+
+  console.log(`\n--- 「${rejected.name}」を却下後 ---`);
+  console.log(`更新後の条件: ${JSON.stringify(nextState)}`);
+  console.log();
+  const nextSuggestions = await recommend(nextState, judge, catalog);
+  printSuggestions(nextSuggestions);
 }
 
 main().catch((err) => {

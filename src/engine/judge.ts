@@ -1,5 +1,6 @@
-import { TypeSafeClient, TypeSafeError, score } from "@typesafe-ai/sdk";
+import { TypeSafeClient, TypeSafeError, choice, score } from "@typesafe-ai/sdk";
 import type { Activity } from "./catalog";
+import { REJECTION_REASON_CRITERIA, type RejectionReason } from "./rejection";
 import type { State } from "./types";
 
 export const FIT_LEVELS = [
@@ -26,6 +27,11 @@ export interface JevScoreResult {
  */
 export interface Judge {
   scoreCandidates(state: State, candidates: Activity[]): Promise<JevScoreResult[] | null>;
+  /**
+   * 「違うな」のその他(自由記述)を、CLAUDE.md記載の5つの理由のいずれかに分類する。
+   * 分類できない/失敗した場合はnull(呼び出し側は却下idの除外のみ行う)。
+   */
+  classifyReason(freeText: string): Promise<RejectionReason | null>;
 }
 
 export class JevJudge implements Judge {
@@ -76,6 +82,24 @@ export class JevJudge implements Judge {
     } catch (err) {
       if (err instanceof TypeSafeError) {
         console.warn(`Jevの採点に失敗したため、ルールスコアのみで続行します: ${err.message}`);
+        return null;
+      }
+      throw err;
+    }
+  }
+
+  async classifyReason(freeText: string): Promise<RejectionReason | null> {
+    try {
+      const result = await this.client.systemOne({
+        state: { message: freeText },
+        questions: {
+          reason: choice("`message` は、次のどの却下理由に最も近いですか？", REJECTION_REASON_CRITERIA),
+        },
+      });
+      return result.answers.reason.choice;
+    } catch (err) {
+      if (err instanceof TypeSafeError) {
+        console.warn(`Jevの理由分類に失敗しました: ${err.message}`);
         return null;
       }
       throw err;

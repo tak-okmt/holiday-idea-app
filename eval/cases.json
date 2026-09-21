@@ -1,0 +1,52 @@
+[
+  {
+    "id": "case_01",
+    "description": "ソロ・気力ほどほど・2時間以内・3千円まで・晴れ・秋",
+    "state": { "with": "solo", "energy": "medium", "time": "within_2h", "budget": "under3000", "season": "autumn", "weather": "sunny" }
+  },
+  {
+    "id": "case_02",
+    "description": "家族・気力低め・半日・無料・天気指定なし・春",
+    "state": { "with": "family", "energy": "low", "time": "half_day", "budget": "free", "season": "spring" }
+  },
+  {
+    "id": "case_03",
+    "description": "友人・気力高め・2時間以内・気にしない・雨・夏",
+    "state": { "with": "friends", "energy": "high", "time": "within_2h", "budget": "unlimited", "season": "summer", "weather": "rainy" }
+  },
+  {
+    "id": "case_04",
+    "description": "パートナー・気力ほどほど・1日・3千円まで・曇り・冬",
+    "state": { "with": "partner", "energy": "medium", "time": "full_day", "budget": "under3000", "season": "winter", "weather": "cloudy" }
+  },
+  {
+    "id": "case_05",
+    "description": "ソロ・気力低め・半日・無料・雨・冬",
+    "state": { "with": "solo", "energy": "low", "time": "half_day", "budget": "free", "season": "winter", "weather": "rainy" }
+  },
+  {
+    "id": "case_06",
+    "description": "友人・気力高め・1日・気にしない・晴れ・夏",
+    "state": { "with": "friends", "energy": "high", "time": "full_day", "budget": "unlimited", "season": "summer", "weather": "sunny" }
+  },
+  {
+    "id": "case_07",
+    "description": "家族・気力ほどほど・2時間以内・3千円まで・晴れ・春",
+    "state": { "with": "family", "energy": "medium", "time": "within_2h", "budget": "under3000", "season": "spring", "weather": "sunny" }
+  },
+  {
+    "id": "case_08",
+    "description": "パートナー・気力低め・半日・無料・曇り・秋",
+    "state": { "with": "partner", "energy": "low", "time": "half_day", "budget": "free", "season": "autumn", "weather": "cloudy" }
+  },
+  {
+    "id": "case_09",
+    "description": "ソロ・気力高め・2時間以内・気にしない・天気指定なし・夏",
+    "state": { "with": "solo", "energy": "high", "time": "within_2h", "budget": "unlimited", "season": "summer" }
+  },
+  {
+    "id": "case_10",
+    "description": "友人・気力ほどほど・半日・3千円まで・雨・冬",
+    "state": { "with": "friends", "energy": "medium", "time": "half_day", "budget": "under3000", "season": "winter", "weather": "rainy" }
+  }
+]

@@ -68,6 +68,13 @@ describe("passesFilters", () => {
     expect(passesFilters(activity, makeState({ rejectedIds: ["act_099"] }))).toBe(false);
     expect(passesFilters(activity, makeState({ rejectedIds: ["act_001"] }))).toBe(true);
   });
+
+  it("excludeNeedsPrepが立っていれば準備が必要な候補を除外する(「面倒そう」による却下)", () => {
+    const activity = makeActivity({ needs_prep: true });
+    expect(passesFilters(activity, makeState({ excludeNeedsPrep: true }))).toBe(false);
+    expect(passesFilters(activity, makeState({ excludeNeedsPrep: false }))).toBe(true);
+    expect(passesFilters(makeActivity({ needs_prep: false }), makeState({ excludeNeedsPrep: true }))).toBe(true);
+  });
 });
 
 describe("ruleMatchScore", () => {
@@ -81,6 +88,27 @@ describe("ruleMatchScore", () => {
 
   it("energyが2段差なら0", () => {
     expect(ruleMatchScore(makeActivity({ energy: "low" }), makeState({ energy: "high" }))).toBe(0);
+  });
+
+  it("penalizedCategoriesに含まれるカテゴリは半減する(「気分じゃない」による却下)", () => {
+    const activity = makeActivity({ category: "food", energy: "low" });
+    const state = makeState({ energy: "low", penalizedCategories: ["food"] });
+    expect(ruleMatchScore(activity, state)).toBe(0.5);
+    expect(ruleMatchScore(activity, makeState({ energy: "low", penalizedCategories: ["craft"] }))).toBe(1);
+  });
+
+  it("penalizeOutdoorが立っていれば屋外候補は半減する(「外に出たくない」による却下)", () => {
+    const outdoor = makeActivity({ indoor: false, energy: "low" });
+    const indoor = makeActivity({ indoor: true, energy: "low" });
+    const state = makeState({ energy: "low", penalizeOutdoor: true });
+    expect(ruleMatchScore(outdoor, state)).toBe(0.5);
+    expect(ruleMatchScore(indoor, state)).toBe(1);
+  });
+
+  it("複数のペナルティは重ね掛けされる", () => {
+    const activity = makeActivity({ category: "food", indoor: false, energy: "low" });
+    const state = makeState({ energy: "low", penalizedCategories: ["food"], penalizeOutdoor: true });
+    expect(ruleMatchScore(activity, state)).toBe(0.25);
   });
 });
 

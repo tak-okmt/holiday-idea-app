@@ -101,7 +101,7 @@
 - [x] 週末1: リポジトリ初期化、カタログのスキーマ、候補100件の作成と偏りの集計
 - [x] 週末2: Jev で日本語の採点を10ケース試し、使いどころと重みの初期値を決める
 - [x] 週末3: 推薦エンジン（UIなし。CLIで回答を渡すと3件出る）
-- [ ] 週末4: 「違うな」による再ランキング、評価ケース（`eval/cases.json`）と回帰テスト
+- [x] 週末4: 「違うな」による再ランキング、評価ケース（`eval/cases.json`）と回帰テスト
 - [ ] 週末5: スマホ前提のWeb画面（質問 → 提案 → 違うな）
 - [ ] 週末6: pitch / first_step の見直し、カタログを200件へ拡充
 - [ ] 週末7: ログ保存、デプロイ（天気連携は余力があれば）
@@ -155,3 +155,14 @@
     - 【ハマりどころ】`pnpm run <script> -- --foo=bar`は、pnpmが`--`自体を子プロセスへの引数として渡してくる。Node標準の`parseArgs`は素の`--`を「オプション終端」とみなし以降を全部位置引数にしてしまうため、`process.argv`から`--`トークンを事前に除去してから`parseArgs`に渡す必要があった。
   - テスト22件追加(`rules.test.ts`/`reason.test.ts`/`recommend.test.ts`)。`recommend.test.ts`はFake Judgeを使い、実APIを叩かずにフィルタ・重み付け・フォールバックを検証。実APIでの動作確認はCLIを2回手動実行(正常系・不正キーでのフォールバック)して確認済み。
 - `pnpm test`(22件全通過) / `pnpm build` / `pnpm lint` / `tsc --noEmit` すべて通過。
+
+### 2026-09-21 週末4
+- 「違うな」の再ランキングを実装（`src/engine/rejection.ts`）。CLAUDE.mdの理由テーブル通りにStateを更新する`applyRejection(state, activity, reason)`を追加。
+  - **設計判断（要確認）**: テーブルでは「その候補を除外」は`been_there`のみの記載だが、**どの理由で却下してもその候補id自体はrejectedIdsに積む**ようにした(同じ案を出し続けるのは不自然なため)。違和感があれば`rejection.ts`の`applyRejection`を直せばよい。
+  - `money`→予算1段下げ、`hassle`→`excludeNeedsPrep`を立てて`energy`1段下げ、`been_there`→除外のみ、`not_in_mood`→`penalizedCategories`に累積、`stay_home`→`penalizeOutdoor`を立てる。予算/気力は最低段階(free/low)でそれ以上下がらない。
+  - `rules.ts`の`ruleMatchScore`に「同じカテゴリ」「屋外」の**50%減衰(乗算・重ね掛け可)**を追加。強さは仮決め、実利用で要調整。
+  - `judge.ts`の`Judge`に`classifyReason(freeText)`を追加。週末2で検証済みのchoice分類パターンをそのまま使用。CLIの`--reject-text`で実際に試し、「今日は走る気分じゃないかな」→`not_in_mood`に正しく分類されることを確認。
+- `scripts/recommend-cli.ts`に`--reject-id`+`--reject-reason`（または`--reject-text`でJev分類）を追加。却下前後の提案を並べて表示し、カテゴリ減点が実際のスコアに反映されることを手動確認済み(例: sportsを気分じゃないで却下→残りのsports候補のrule scoreが1.00→0.50に低下)。
+- `eval/cases.json`にwith/energy/time/budget/weather/seasonの組み合わせが異なる実カタログでの評価ケース10件を作成。`eval/cases.test.ts`で各ケースにつき「初回提案の足切り・降順ソート」と「5つの却下理由それぞれで再提案が正しく反映される」ことを検証する回帰テストを実装（60件、Jevは呼ばず決定的に実行）。
+  - 「その他（自由記述）」のJev分類は実API依存のため回帰テストには含めず、CLIでの手動確認(上記)に留めた。
+- テスト92件追加/更新、全通過。`pnpm test` / `pnpm build` / `pnpm lint` / `tsc --noEmit` すべて通過。
