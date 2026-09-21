@@ -6,6 +6,12 @@ import { recommend } from "@/engine/recommend";
 import { applyRejection, type RejectionReason } from "@/engine/rejection";
 import { currentSeason } from "@/engine/season";
 import { StateSchema, type State, type Suggestion } from "@/engine/types";
+import {
+  logDecision as recordDecision,
+  logRejection,
+  logSessionAndAnswers,
+  logSuggestions,
+} from "@/lib/log";
 
 /** クライアントに渡す表示用の型。内部スコア(rule/jev)は含めない。 */
 export interface SuggestionView {
@@ -48,13 +54,19 @@ function buildInitialState(answers: Answers): State {
 }
 
 export async function fetchSuggestions(
+  sessionId: string,
   answers: Answers
-): Promise<{ state: State; suggestions: SuggestionView[] }> {
+): Promise<{ state: State; suggestions: SuggestionView[]; round: number }> {
   const state = buildInitialState(answers);
   const catalog = loadCatalog();
   const judge = new JevJudge();
   const suggestions = await recommend(state, judge, catalog);
-  return { state, suggestions: suggestions.map(toView) };
+
+  const round = 0;
+  await logSessionAndAnswers(sessionId, state);
+  await logSuggestions(sessionId, round, suggestions);
+
+  return { state, suggestions: suggestions.map(toView), round };
 }
 
 export type RejectInput =
@@ -62,10 +74,17 @@ export type RejectInput =
   | { kind: "text"; text: string };
 
 export async function rejectAndFetch(
+  sessionId: string,
   state: State,
+  round: number,
   activityId: string,
   input: RejectInput
-): Promise<{ state: State; suggestions: SuggestionView[]; classifiedReason: RejectionReason | null }> {
+): Promise<{
+  state: State;
+  suggestions: SuggestionView[];
+  classifiedReason: RejectionReason | null;
+  round: number;
+}> {
   const catalog = loadCatalog();
   const activity = catalog.find((a) => a.id === activityId);
   if (!activity) {
@@ -76,10 +95,28 @@ export async function rejectAndFetch(
   const reason: RejectionReason | null =
     input.kind === "reason" ? input.reason : await judge.classifyReason(input.text);
 
+  await logRejection(sessionId, round, activityId, {
+    reason: input.kind === "reason" ? input.reason : undefined,
+    freeText: input.kind === "text" ? input.text : undefined,
+    classifiedReason: input.kind === "text" ? reason : undefined,
+  });
+
   const nextState = reason
     ? applyRejection(state, activity, reason)
     : { ...state, rejectedIds: [...(state.rejectedIds ?? []), activity.id] };
 
+  const nextRound = round + 1;
   const suggestions = await recommend(nextState, judge, catalog);
-  return { state: nextState, suggestions: suggestions.map(toView), classifiedReason: reason };
+  await logSuggestions(sessionId, nextRound, suggestions);
+
+  return {
+    state: nextState,
+    suggestions: suggestions.map(toView),
+    classifiedReason: reason,
+    round: nextRound,
+  };
+}
+
+export async function logDecision(sessionId: string, activityId: string): Promise<void> {
+  await recordDecision(sessionId, activityId);
 }

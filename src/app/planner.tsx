@@ -3,6 +3,7 @@
 import { useState } from "react";
 import {
   fetchSuggestions,
+  logDecision,
   rejectAndFetch,
   type Answers,
   type RejectInput,
@@ -97,6 +98,10 @@ function ReasonPicker({ onReject }: { onReject: (input: RejectInput) => void }) 
 }
 
 export function Planner() {
+  // ログインなしのMVPのため、匿名のセッションIDを発行する(個人を特定しない)。
+  // 「最初からやり直す」の度に新しい journey として新しいIDを振り直す(handleReset)。
+  const [sessionId, setSessionId] = useState(() => crypto.randomUUID());
+  const [round, setRound] = useState(0);
   const [screen, setScreen] = useState<Screen>({ step: "question", index: 0 });
   const [withValue, setWithValue] = useState<Answers["with"] | null>(null);
   const [energyValue, setEnergyValue] = useState<Answers["energy"] | null>(null);
@@ -109,13 +114,14 @@ export function Planner() {
     if (!withValue || !energyValue || !timeValue || !budgetValue) return;
     setScreen({ step: "loading" });
     try {
-      const result = await fetchSuggestions({
+      const result = await fetchSuggestions(sessionId, {
         with: withValue,
         energy: energyValue,
         time: timeValue,
         budget: budgetValue,
         mood,
       });
+      setRound(result.round);
       if (result.suggestions.length === 0) {
         setScreen({ step: "empty" });
       } else {
@@ -156,7 +162,8 @@ export function Planner() {
     setScreen({ step: "loading" });
     setShowReasonPicker(false);
     try {
-      const result = await rejectAndFetch(currentState, activityId, input);
+      const result = await rejectAndFetch(sessionId, currentState, round, activityId, input);
+      setRound(result.round);
       if (result.suggestions.length === 0) {
         setScreen({ step: "empty" });
       } else {
@@ -167,13 +174,21 @@ export function Planner() {
     }
   }
 
+  function handleDecide(activityId: string, suggestion: SuggestionView) {
+    setScreen({ step: "decided", suggestion });
+    // ログは完了体験をブロックしない(失敗してもUIは進める)。
+    void logDecision(sessionId, activityId);
+  }
+
   function handleReset() {
+    setSessionId(crypto.randomUUID());
     setWithValue(null);
     setEnergyValue(null);
     setTimeValue(null);
     setBudgetValue(null);
     setMood("");
     setShowReasonPicker(false);
+    setRound(0);
     setScreen({ step: "question", index: 0 });
   }
 
@@ -242,7 +257,7 @@ export function Planner() {
               <button
                 type="button"
                 className={styles.acceptButton}
-                onClick={() => setScreen({ step: "decided", suggestion: s })}
+                onClick={() => handleDecide(s.id, s)}
               >
                 これにする！
               </button>
