@@ -100,7 +100,7 @@
 ## ロードマップ（1週末 = 6〜8時間）
 - [x] 週末1: リポジトリ初期化、カタログのスキーマ、候補100件の作成と偏りの集計
 - [x] 週末2: Jev で日本語の採点を10ケース試し、使いどころと重みの初期値を決める
-- [ ] 週末3: 推薦エンジン（UIなし。CLIで回答を渡すと3件出る）
+- [x] 週末3: 推薦エンジン（UIなし。CLIで回答を渡すと3件出る）
 - [ ] 週末4: 「違うな」による再ランキング、評価ケース（`eval/cases.json`）と回帰テスト
 - [ ] 週末5: スマホ前提のWeb画面（質問 → 提案 → 違うな）
 - [ ] 週末6: pitch / first_step の見直し、カタログを200件へ拡充
@@ -143,3 +143,15 @@
   - **エラーハンドリング**: SDKの例外はすべて`TypeSafeError`基底クラスを継承しているため、`catch (err) { if (err instanceof TypeSafeError) {...} }` の単一catchでJevの障害を一括検知できる。週末3の`Judge`インターフェースのフォールバック実装で採用予定。
   - 【重要・ハマりどころ】APIキーは https://console.typesafe.ai/keys で発行すること。似た名前の別ドメイン（`jevtypesafeai.com`）でも本物そっくりのダッシュボードが表示されたが、そこで発行したキーは正規エンドポイント（`api.typesafe.ai`）では認証エラーになった。ドキュメント記載のドメインと1文字でも違うものは信用しない。
 - `pnpm test` / `pnpm build` / `pnpm lint` / `tsc --noEmit` すべてNode24環境で通過。
+
+### 2026-09-21 週末3
+- 推薦エンジンを実装（`src/engine/`）。処理の流れはCLAUDE.md記載のアーキテクチャ通り: State→ルール足切り→Jev一括採点→重み付け→上位3件。
+  - `types.ts`: `State`(zodスキーマ)と`Suggestion`型。`time`の選択肢(`within_2h`/`half_day`/`full_day`)を新設(候補の`minutes`と比較するための分数変換は`rules.ts`)。`season`はユーザーに聞かず現在日から自動算出(CLIの`currentSeason()`)。
+  - `rules.ts`: 足切り(人数・時間・予算・天気・却下済み)。**energyは足切り対象に含めていない**(CLAUDE.mdの足切り一覧に無いため)。ルール一致度はenergyの近さのみで算出(完全一致1.0/1段差0.5/2段差0.0)。季節・気分などの自由記述ニュアンスはJev側の役割として切り分けた。
+  - `judge.ts`: `Judge`インターフェースと`JevJudge`。週末2で検証済みのfan-out(1state+複数候補→1リクエスト)をそのまま採用。`TypeSafeError`を`catch`して`null`を返し、失敗時はルールスコアのみにフォールバックすることを実機(不正なAPIキー)で確認済み。
+  - `recommend.ts`: `recommend(state, judge, catalog?, topN=3)`。`finalScore = jevScoreがnullならruleScoreそのまま、そうでなければ RULE_WEIGHT*ruleScore + JEV_WEIGHT*jevScore`(重みは`weights.ts`に集約)。
+  - `reason.ts`: 理由文テンプレート。CLAUDE.md記載の例文「一人で、雨でも、2時間以内にできるので」をテストで再現済み。
+  - `scripts/recommend-cli.ts`: `pnpm run recommend -- --with=solo --energy=medium --time=within_2h --budget=under3000 [--mood=... --weather=... --season=... --rejected=act_001]`。入力はzodで検証しエラーメッセージを表示。
+    - 【ハマりどころ】`pnpm run <script> -- --foo=bar`は、pnpmが`--`自体を子プロセスへの引数として渡してくる。Node標準の`parseArgs`は素の`--`を「オプション終端」とみなし以降を全部位置引数にしてしまうため、`process.argv`から`--`トークンを事前に除去してから`parseArgs`に渡す必要があった。
+  - テスト22件追加(`rules.test.ts`/`reason.test.ts`/`recommend.test.ts`)。`recommend.test.ts`はFake Judgeを使い、実APIを叩かずにフィルタ・重み付け・フォールバックを検証。実APIでの動作確認はCLIを2回手動実行(正常系・不正キーでのフォールバック)して確認済み。
+- `pnpm test`(22件全通過) / `pnpm build` / `pnpm lint` / `tsc --noEmit` すべて通過。
