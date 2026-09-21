@@ -28,7 +28,7 @@ const OUTDOOR_PENALTY_FACTOR = 0.5;
 /**
  * 足切り（CLAUDE.md記載: 人数・時間・予算・天気・却下済み）。
  * energyはここでは判定しない（一致度スコアの方で扱う。理由は ruleMatchScore を参照）。
- * excludeNeedsPrep は「面倒そう」による却下(rejection.ts)で立つ。
+ * excludeNeedsPrep は「面倒そう」、excludedCategories は「興味がない」による却下(rejection.ts)で立つ。
  */
 export function passesFilters(activity: Activity, state: State): boolean {
   if (!activity.with.includes(state.with)) return false;
@@ -37,6 +37,7 @@ export function passesFilters(activity: Activity, state: State): boolean {
   if (state.weather && !activity.weather_ok.includes(state.weather)) return false;
   if (state.rejectedIds?.includes(activity.id)) return false;
   if (state.excludeNeedsPrep && activity.needs_prep) return false;
+  if (state.excludedCategories?.includes(activity.category)) return false;
   return true;
 }
 

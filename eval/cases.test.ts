@@ -70,6 +70,10 @@ describe("eval/cases.json 回帰テスト", () => {
           if (reason === "stay_home") {
             expect(nextState.penalizeOutdoor).toBe(true);
           }
+          if (reason === "not_interested") {
+            expect(nextState.excludedCategories).toContain(rejected.category);
+            expect(second.every((s) => s.activity.category !== rejected.category)).toBe(true);
+          }
         });
       }
     });

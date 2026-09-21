@@ -75,6 +75,13 @@ describe("passesFilters", () => {
     expect(passesFilters(activity, makeState({ excludeNeedsPrep: false }))).toBe(true);
     expect(passesFilters(makeActivity({ needs_prep: false }), makeState({ excludeNeedsPrep: true }))).toBe(true);
   });
+
+  it("excludedCategoriesに含まれるカテゴリの候補は除外する(「興味がない」による却下)", () => {
+    const activity = makeActivity({ category: "food" });
+    expect(passesFilters(activity, makeState({ excludedCategories: ["food"] }))).toBe(false);
+    expect(passesFilters(activity, makeState({ excludedCategories: ["craft"] }))).toBe(true);
+    expect(passesFilters(activity, makeState({ excludedCategories: undefined }))).toBe(true);
+  });
 });
 
 describe("ruleMatchScore", () => {

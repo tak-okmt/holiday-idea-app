@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Activity } from "./catalog";
-import { applyRejection } from "./rejection";
+import { applyRejection, REJECTION_REASONS } from "./rejection";
 import type { State } from "./types";
 
 function makeActivity(overrides: Partial<Activity> = {}): Activity {
@@ -38,7 +38,7 @@ describe("applyRejection", () => {
   it("どの理由でも却下した候補をrejectedIdsに積む", () => {
     const state = makeState();
     const activity = makeActivity({ id: "act_042" });
-    for (const reason of ["money", "hassle", "been_there", "not_in_mood", "stay_home"] as const) {
+    for (const reason of REJECTION_REASONS) {
       const next = applyRejection(state, activity, reason);
       expect(next.rejectedIds).toContain("act_042");
     }
@@ -72,5 +72,11 @@ describe("applyRejection", () => {
   it("stay_home: penalizeOutdoorを立てる", () => {
     const result = applyRejection(makeState(), makeActivity(), "stay_home");
     expect(result.penalizeOutdoor).toBe(true);
+  });
+
+  it("not_interested: 却下した候補のカテゴリをexcludedCategoriesに積む(累積、not_in_moodの減点より強い除外)", () => {
+    const state = makeState({ excludedCategories: ["craft"] });
+    const result = applyRejection(state, makeActivity({ category: "food" }), "not_interested");
+    expect(result.excludedCategories).toEqual(["craft", "food"]);
   });
 });

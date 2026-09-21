@@ -26,6 +26,11 @@ export const StateSchema = z.object({
   penalizedCategories: z.array(z.enum(CATEGORIES)).optional(),
   /** 「外に出たくない」による却下で立つ。屋外の候補を減点する。 */
   penalizeOutdoor: z.boolean().optional(),
+  /**
+   * 「興味がない」による却下で積み上がる。該当カテゴリの候補を完全に除外する。
+   * 「気分じゃない」(penalizedCategories, 減点のみ)より強いシグナル。
+   */
+  excludedCategories: z.array(z.enum(CATEGORIES)).optional(),
 });
 
 export type State = z.infer<typeof StateSchema>;

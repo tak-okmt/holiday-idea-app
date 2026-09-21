@@ -43,6 +43,7 @@ const REASON_LABELS: Record<RejectionReason, string> = {
   been_there: "やったことある",
   not_in_mood: "気分じゃない",
   stay_home: "外に出たくない",
+  not_interested: "興味がない",
 };
 
 const QUESTION_STEPS = ["with", "energy", "time", "budget", "mood"] as const;
