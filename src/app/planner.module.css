@@ -1,0 +1,227 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #1a1a1a;
+}
+
+.heading {
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 24px;
+}
+
+.questionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.optionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option,
+.optionSelected {
+  flex: 1 1 auto;
+  min-height: 48px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d0d0;
+  background: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.option:hover {
+  border-color: #999;
+}
+
+.optionSelected {
+  border-color: #2f6feb;
+  background: #eaf1ff;
+  font-weight: 600;
+}
+
+.moodInput,
+.otherInput {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d0d0;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 12px;
+  border: none;
+  background: #2f6feb;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.submitButton:disabled {
+  background: #b9c8e8;
+  cursor: not-allowed;
+}
+
+.loading,
+.empty,
+.errorText {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1rem;
+}
+
+.errorText {
+  color: #c0392b;
+}
+
+.cardList {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+}
+
+.cardCategory {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+
+.cardReason {
+  font-size: 0.85rem;
+  color: #2f6feb;
+  margin: 0 0 8px;
+}
+
+.cardPitch {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.cardFirstStep {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.rejectButton {
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d0d0;
+  background: #fafafa;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.reasonPicker {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.reasonPickerLabel {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0 0 8px;
+}
+
+.reasonButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.reasonButton {
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d0d0;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.otherRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.otherInput {
+  flex: 1;
+}
+
+.otherSubmit {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: none;
+  background: #2f6feb;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.otherSubmit:disabled {
+  background: #b9c8e8;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.linkButton {
+  display: block;
+  margin: 8px auto 0;
+  background: none;
+  border: none;
+  color: #2f6feb;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}

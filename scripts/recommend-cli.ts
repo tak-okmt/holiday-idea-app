@@ -4,20 +4,13 @@ import { loadCatalog } from "../src/engine/catalog";
 import { JevJudge } from "../src/engine/judge";
 import { recommend } from "../src/engine/recommend";
 import { applyRejection, REJECTION_REASONS, type RejectionReason } from "../src/engine/rejection";
-import { StateSchema, type State, type Suggestion } from "../src/engine/types";
+import { currentSeason } from "../src/engine/season";
+import { StateSchema, type Suggestion } from "../src/engine/types";
 
 try {
   process.loadEnvFile(".env.local");
 } catch {
   // .env.local が無い場合はシェルの環境変数をそのまま使う
-}
-
-function currentSeason(date = new Date()): State["season"] {
-  const month = date.getMonth() + 1;
-  if (month >= 3 && month <= 5) return "spring";
-  if (month >= 6 && month <= 8) return "summer";
-  if (month >= 9 && month <= 11) return "autumn";
-  return "winter";
 }
 
 // pnpm は `pnpm run recommend -- --with=solo` の "--" 自体を引数として渡してくる。

@@ -102,7 +102,7 @@
 - [x] 週末2: Jev で日本語の採点を10ケース試し、使いどころと重みの初期値を決める
 - [x] 週末3: 推薦エンジン（UIなし。CLIで回答を渡すと3件出る）
 - [x] 週末4: 「違うな」による再ランキング、評価ケース（`eval/cases.json`）と回帰テスト
-- [ ] 週末5: スマホ前提のWeb画面（質問 → 提案 → 違うな）
+- [x] 週末5: スマホ前提のWeb画面（質問 → 提案 → 違うな）
 - [ ] 週末6: pitch / first_step の見直し、カタログを200件へ拡充
 - [ ] 週末7: ログ保存、デプロイ（天気連携は余力があれば）
 - [ ] 週末8: 友人5〜10人に使ってもらい、ログと感想から次の改善を決める
@@ -166,3 +166,24 @@
 - `eval/cases.json`にwith/energy/time/budget/weather/seasonの組み合わせが異なる実カタログでの評価ケース10件を作成。`eval/cases.test.ts`で各ケースにつき「初回提案の足切り・降順ソート」と「5つの却下理由それぞれで再提案が正しく反映される」ことを検証する回帰テストを実装（60件、Jevは呼ばず決定的に実行）。
   - 「その他（自由記述）」のJev分類は実API依存のため回帰テストには含めず、CLIでの手動確認(上記)に留めた。
 - テスト92件追加/更新、全通過。`pnpm test` / `pnpm build` / `pnpm lint` / `tsc --noEmit` すべて通過。
+
+### 2026-09-21 週末5
+- スマホ前提のWeb画面を実装。エンジン(`src/engine`)はUI非依存のまま、`src/app/actions.ts`(Server Actions)経由で呼び出す形にした。
+  - `src/engine/season.ts`: `currentSeason()`をCLIから切り出して共通化。
+  - `src/app/actions.ts`("use server"): `fetchSuggestions(answers)` / `rejectAndFetch(state, activityId, input)`。APIキーやカタログ読み込みはサーバー側のみ。クライアントにはスコアなど内部情報を含まない`SuggestionView`のみ返す。
+  - `src/app/planner.tsx`("use client") + `planner.module.css`: 4問+気分入力を1画面にまとめ(質問ごとの画面遷移なし)、送信後に提案3件を表示。各カードに「違うな」ボタンがあり、押すとその場で理由(5択+自由記述)を展開して`rejectAndFetch`を呼び、結果を差し替える。
+  - 天気はUIでは聞かない(Open-Meteo連携は将来の「後で追加」項目のため)。季節はサーバー側で自動算出。
+  - `globals.css`のダークモード分岐(未使用)を削除、不要になった`page.module.css`を削除。
+  - `next dev`実行時にNext.js側がこのCLAUDE.mdの末尾へ"nextjs-agent-rules"ブロックを自動追記する(週末5で確認)。開発者向けの記載なので触らずそのままにしている。
+- ブラウザ(スマホ幅375x812)で実際に動作確認: 4問回答→提案3件表示→「ジョギング」を「気分じゃない」で却下→sportsカテゴリが減点され、learning/nature/foodの候補に差し替わることを確認。コンソールエラーなし。「最初からやり直す」でフォームに戻ることも確認。
+- 自動UIテストは追加していない(計画通り、スコープを広げないため)。`pnpm test`(92件) / `pnpm build` / `pnpm lint` / `tsc --noEmit` はすべて通過。
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
