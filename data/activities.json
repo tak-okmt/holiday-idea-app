@@ -566,7 +566,7 @@
     ],
     "needs_prep": true,
     "pitch": "体を動かしながら景色も楽しめる、達成感のあるアウトドア。",
-    "first_step": "初心者向けのハイキングコースを1つ選び、歩きやすい靴を用意する。",
+    "first_step": "距離の短いハイキングコースを1つ選び、歩きやすい靴を用意する。",
     "link": null
   },
   {
@@ -1317,7 +1317,7 @@
     ],
     "needs_prep": true,
     "pitch": "発酵を待つ時間も含めて、家じゅうがいい匂いになる贅沢な過程。",
-    "first_step": "初心者向けのパンレシピと材料をそろえる。",
+    "first_step": "失敗しにくいパンのレシピを1つ選び、材料をそろえる。",
     "link": null
   },
   {
@@ -1346,7 +1346,7 @@
     ],
     "needs_prep": true,
     "pitch": "家から出なくても、特別な一品でちょっとしたご褒美気分になれる。",
-    "first_step": "気になっていたお取り寄せグルメを1つ注文する。",
+    "first_step": "話題になっているお取り寄せグルメを1つ選んで注文する。",
     "link": null
   },
   {
@@ -1711,7 +1711,7 @@
     ],
     "needs_prep": true,
     "pitch": "その場の空気を共有する体験が、笑いや感動を何倍にもしてくれる。",
-    "first_step": "近くで開催されている公演を調べてチケットを確認する。",
+    "first_step": "行けそうな公演を1つ探し、チケットの有無を確認する。",
     "link": null
   },
   {
@@ -2125,7 +2125,7 @@
     ],
     "needs_prep": false,
     "pitch": "入浴剤を1つ変えるだけで、いつものお風呂が特別な時間になる。",
-    "first_step": "気になっていた入浴剤を1つ用意してお湯を張る。",
+    "first_step": "評判の入浴剤を1つ買って、お湯を張る。",
     "link": null
   },
   {
@@ -2398,7 +2398,7 @@
     ],
     "needs_prep": false,
     "pitch": "掘り出し物を探しながら歩くだけで、自然と会話が弾む。",
-    "first_step": "近くで開催されているマルシェやフリマの日程を調べる。",
+    "first_step": "今週末に近くで開催されるマルシェかフリマを探す。",
     "link": null
   },
   {
@@ -2788,6 +2788,2809 @@
     "needs_prep": false,
     "pitch": "いつもと違う道を歩くだけで、ペットも自分も新鮮な気分になれる。",
     "first_step": "まだ歩いたことのない近所のコースを1つ調べる。",
+    "link": null
+  },
+  {
+    "id": "act_101",
+    "name": "ガラス細工体験でオリジナルのグラスを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "炎を使う作業に少し緊張しながら向き合う時間が、いい気分転換になる。",
+    "first_step": "ガラス細工体験ができる工房を探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_102",
+    "name": "アロマキャンドルを手作りする",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "好きな香りを選んで固めていく時間は、贈り物を用意するような楽しさがある。",
+    "first_step": "キャンドル用ワックスと好きな香りのオイルをセットで揃える。",
+    "link": null
+  },
+  {
+    "id": "act_103",
+    "name": "マクラメ編みで壁掛けタペストリーを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "紐を結んでいくだけで模様が育っていく、単純作業なのに没頭できる手仕事。",
+    "first_step": "マクラメ編みの初級キットと壁掛け用のリングを用意する。",
+    "link": null
+  },
+  {
+    "id": "act_104",
+    "name": "木工体験でスプーン1本を削り出す",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "木を削るうちに形が生まれていく過程は、地味だけど確かな達成感がある。",
+    "first_step": "木工体験ができる工房を探し、使う木材の種類を決めておく。",
+    "link": null
+  },
+  {
+    "id": "act_105",
+    "name": "刺繍でオリジナルのポーチを仕上げる",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "一針ずつ図案が形になっていく様子は、地道だけど飽きずに続けられる。",
+    "first_step": "刺繍糸と無地のポーチ、簡単な図案を1つ用意する。",
+    "link": null
+  },
+  {
+    "id": "act_106",
+    "name": "金継ぎ体験で欠けた器を修復する",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "壊れたものを直して使い続けるという発想に触れると、ものの見方が少し変わる。",
+    "first_step": "金継ぎ体験ができる教室を探し、直したい器があれば持っていく。",
+    "link": null
+  },
+  {
+    "id": "act_107",
+    "name": "ステンドグラス風のサンキャッチャーを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "光にかざすと表情が変わる小さな作品は、作るのも飾るのも楽しい。",
+    "first_step": "サンキャッチャー用のガラスパーツとテグスを手芸店かネットで揃える。",
+    "link": null
+  },
+  {
+    "id": "act_108",
+    "name": "七宝焼き体験でアクセサリーを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "焼き上がるまで色の変化が予測できないところに、ちょっとした賭け事のような面白さがある。",
+    "first_step": "七宝焼き体験ができる教室を探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_109",
+    "name": "しめ縄やリースをハンドメイドする",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "季節の飾りを自分の手で作ると、いつもの年末年始が少し特別になる。",
+    "first_step": "リース台と好きな木の実や造花の材料を用意する。",
+    "link": null
+  },
+  {
+    "id": "act_110",
+    "name": "革の名刺入れをハンドステッチで仕立てる",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "革を縫い進めるうちに、道具を使う手つきが少しずつ様になっていく。",
+    "first_step": "革のキットと縫い針、蝋引き糸をセットで用意する。",
+    "link": null
+  },
+  {
+    "id": "act_111",
+    "name": "ミニチュアドールハウスの部屋を組み立てる",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "小さな部屋を作り込んでいく作業は、時間を忘れて没頭できる。",
+    "first_step": "作りたい雰囲気のミニチュアドールハウスキットを1つ選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_112",
+    "name": "パラグライダー体験で空から景色を楽しむ",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "空を飛ぶという非日常の体験は、一度やると記憶に残り続ける。",
+    "first_step": "パラグライダー体験ができるスクールを探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_113",
+    "name": "カヤックやSUPで川や湖を漕ぐ",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "水面に近い視点で景色を見るだけで、いつもと違う気分転換になる。",
+    "first_step": "カヤックかSUPのレンタル・体験ができる場所を探す。",
+    "link": null
+  },
+  {
+    "id": "act_114",
+    "name": "渓谷や滝を目指してトレッキングする",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "歩いた先にしか見られない景色があると思うと、足取りが自然と軽くなる。",
+    "first_step": "行きたい渓谷や滝のルートと所要時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_115",
+    "name": "牧場で動物とふれあう",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": false,
+    "pitch": "動物のペースに合わせて過ごす時間は、自然と心がゆるむ。",
+    "first_step": "近隣でふれあい体験ができる牧場を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_116",
+    "name": "静かな森林浴コースをゆっくり歩く",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": false,
+    "pitch": "木々に囲まれてただ歩くだけで、頭の中がすっと静かになる。",
+    "first_step": "近隣で森林浴ができる散策路を1つ調べる。",
+    "link": null
+  },
+  {
+    "id": "act_117",
+    "name": "海辺で貝殻や漂着物を拾いながら散歩する",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "足元を見ながら歩くだけで、いつもと違う時間の流れ方になる。",
+    "first_step": "近くの海辺の干潮時刻を調べて出かける。",
+    "link": null
+  },
+  {
+    "id": "act_118",
+    "name": "高原でトレイルランニングに挑戦する",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "舗装されていない道を走ると、いつものランニングとは違う達成感がある。",
+    "first_step": "トレイルランができる近隣のコースを調べ、トレイルシューズを用意する。",
+    "link": null
+  },
+  {
+    "id": "act_119",
+    "name": "展望台やロープウェイから季節の景色を一望する",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "高い場所から街や自然を見下ろすだけで、気分がすっと切り替わる。",
+    "first_step": "近隣の展望台やロープウェイの営業時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_120",
+    "name": "家庭菜園やガーデニングで苗を植える",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "土に触れて何かを育て始めると、その後の楽しみも長く続く。",
+    "first_step": "育てたい苗と土、プランターをホームセンターで揃える。",
+    "link": null
+  },
+  {
+    "id": "act_121",
+    "name": "川辺でバーベキューを楽しむ",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "屋外で火を囲んで食べるだけで、特別な一日になる。",
+    "first_step": "バーベキューができる河川敷や施設を調べ、食材を買い出しする。",
+    "link": null
+  },
+  {
+    "id": "act_122",
+    "name": "夜の砂浜でナイトピクニックをする",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "波音を聞きながら過ごす夜は、昼間とはまったく違う特別感がある。",
+    "first_step": "防寒具とレジャーシート、飲み物を持って夕方以降に出かける。",
+    "link": null
+  },
+  {
+    "id": "act_123",
+    "name": "投資・資産運用の基礎をオンラインで学ぶ",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "難しそうで後回しにしていた話ほど、まとまった時間で一気に理解が進む。",
+    "first_step": "資産運用の入門講座か解説動画を1つ選んで視聴する。",
+    "link": null
+  },
+  {
+    "id": "act_124",
+    "name": "写真の構図や撮り方をオンラインで学び実践する",
+    "category": "learning",
+    "indoor": false,
+    "with": [
+      "solo"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "少しコツを知るだけで、いつもの散歩道がカメラを向けたくなる景色に変わる。",
+    "first_step": "構図の基本を解説した動画を1本見てから、近所で試し撮りする。",
+    "link": null
+  },
+  {
+    "id": "act_125",
+    "name": "宇宙や天体についての解説動画をまとめて見る",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "スケールの大きな話に触れると、日々の悩みが少し小さく感じられる。",
+    "first_step": "宇宙や天体をテーマにした解説動画やドキュメンタリーを1本選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_126",
+    "name": "コーヒーやワインのテイスティングを独学で試す",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "香りや味の違いを言葉にしようとするだけで、いつもの一杯の解像度が上がる。",
+    "first_step": "飲み比べたい種類を2〜3種類選んで用意する。",
+    "link": null
+  },
+  {
+    "id": "act_127",
+    "name": "大学の公開講座(無料オンライン講義)を1つ受ける",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "専門家の話を体系立てて聞けると、断片的だった知識がつながっていく。",
+    "first_step": "興味のある分野の公開講座やオンライン講義を1つ探す。",
+    "link": null
+  },
+  {
+    "id": "act_128",
+    "name": "語学交換アプリで海外の人とやり取りする",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "medium",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "実際に誰かとやり取りすると、勉強していた言葉が急に生きた言葉に変わる。",
+    "first_step": "語学交換アプリをインストールしてプロフィールを整える。",
+    "link": null
+  },
+  {
+    "id": "act_129",
+    "name": "タイピング速度向上トレーニングに挑戦する",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      20,
+      40
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "数字で伸びが見える練習は、地味だけど達成感がわかりやすい。",
+    "first_step": "タイピング練習サイトで現在の速度を測ってみる。",
+    "link": null
+  },
+  {
+    "id": "act_130",
+    "name": "将棋や囲碁のルールを覚えて棋譜を並べる",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "ルールを覚えるところから含めて、じわじわとのめり込める世界。",
+    "first_step": "入門書か解説動画でルールをひと通り確認する。",
+    "link": null
+  },
+  {
+    "id": "act_131",
+    "name": "地図アプリで知らない土地をバーチャル探検する",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "行ったことのない街を地図上で歩き回るだけで、ちょっとした旅気分になる。",
+    "first_step": "気になっている地名を1つ思い浮かべて地図アプリを開く。",
+    "link": null
+  },
+  {
+    "id": "act_132",
+    "name": "統計学やデータ分析の基礎をオンラインで学ぶ",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "数字の見方が少し変わるだけで、ニュースの読み方まで変わってくる。",
+    "first_step": "統計の入門講座か解説記事を1つ選んで手を動かしながら読む。",
+    "link": null
+  },
+  {
+    "id": "act_133",
+    "name": "手話や点字など初歩のコミュニケーション手段を学ぶ",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "普段使わない伝え方を知ると、世界の見え方が少し広がる。",
+    "first_step": "手話か点字の入門動画や解説サイトを1つ見つける。",
+    "link": null
+  },
+  {
+    "id": "act_134",
+    "name": "サーフィン体験に挑戦する",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "波に乗れた瞬間の高揚感は、他では味わえない特別なもの。",
+    "first_step": "サーフィン体験ができるスクールを探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_135",
+    "name": "スケートボードの練習をする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "少しずつ技ができるようになる過程が、飽きずに続けられる理由になる。",
+    "first_step": "スケートボードとプロテクターを用意し、近くの練習場所を探す。",
+    "link": null
+  },
+  {
+    "id": "act_136",
+    "name": "キックボクシングの体験レッスンを受ける",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "思い切り体を動かして汗をかくと、たまったモヤモヤが一気に発散できる。",
+    "first_step": "近くのキックボクシングジムの体験レッスンを予約する。",
+    "link": null
+  },
+  {
+    "id": "act_137",
+    "name": "乗馬体験をする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "大きな生き物と息を合わせる感覚は、他のスポーツにはない緊張感と楽しさがある。",
+    "first_step": "乗馬体験ができる牧場やクラブを探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_138",
+    "name": "屋内スカイダイビング(ウィンドトンネル)体験をする",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "空を飛ぶ感覚を安全な屋内で味わえる、なかなかない非日常体験。",
+    "first_step": "屋内スカイダイビング施設を探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_139",
+    "name": "アイススケートを楽しむ",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "needs_prep": false,
+    "pitch": "転びそうになりながら滑る時間は、童心に返れる貴重な機会。",
+    "first_step": "近くのアイススケート場の営業時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_140",
+    "name": "トランポリンパークで跳び回る",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "ただ跳ぶだけなのに、気づけば全身運動になっている。",
+    "first_step": "近くのトランポリンパークの予約状況を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_141",
+    "name": "日帰り登山でピークを目指す",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      240,
+      480
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "頂上から見える景色は、そこまで歩いた分だけ特別に感じられる。",
+    "first_step": "日帰りできる山を1つ選び、コースタイムと持ち物を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_142",
+    "name": "バッティングセンターで汗を流す",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "ボールを打ち返す単純な動きが、意外なほどストレス発散になる。",
+    "first_step": "近くのバッティングセンターの営業時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_143",
+    "name": "アーチェリー体験でシューティングを楽しむ",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "的を狙って集中する時間は、他のことを考える余裕がなくなるほど没頭できる。",
+    "first_step": "アーチェリー体験ができる施設を探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_144",
+    "name": "ゴルフの打ちっぱなしでスイング練習をする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "ボールを打つ音とフォームの確認に集中すると、他の考え事が消えていく。",
+    "first_step": "近くの打ちっぱなし練習場の料金と営業時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_145",
+    "name": "フットバッグやスラックラインで公園遊びをする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "道具さえあれば、公園でふらっと始められる気軽な運動遊び。",
+    "first_step": "スラックラインかフットバッグを持って、広めの公園に向かう。",
+    "link": null
+  },
+  {
+    "id": "act_146",
+    "name": "高級レストランでコース料理を楽しむ",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "一皿ごとに驚きがあるコース料理は、特別な日を演出してくれる。",
+    "first_step": "行ってみたいレストランを1つ選び、予約を取る。",
+    "link": null
+  },
+  {
+    "id": "act_147",
+    "name": "お寿司を握る体験をする",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "自分で握った寿司は、味だけでなく達成感もごちそうになる。",
+    "first_step": "寿司握り体験ができる教室やイベントを探す。",
+    "link": null
+  },
+  {
+    "id": "act_148",
+    "name": "チーズや生ハムの食べ比べをする",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "少しずつ味の違いを比べる時間は、お酒がなくても十分楽しめる。",
+    "first_step": "気になる種類のチーズや生ハムを2〜3種類買ってくる。",
+    "link": null
+  },
+  {
+    "id": "act_149",
+    "name": "燻製作りに挑戦する",
+    "category": "food",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "煙に包まれるのを待つ時間も含めて、丸ごと楽しめる調理体験。",
+    "first_step": "燻製器かダンボールで作る簡易キットと食材を用意する。",
+    "link": null
+  },
+  {
+    "id": "act_150",
+    "name": "自家製パスタ(生麺)を作る",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "生地をこねて伸ばすところから作ると、いつものパスタが特別な一皿になる。",
+    "first_step": "強力粉と卵を用意し、生パスタのレシピを1つ選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_151",
+    "name": "日本茶や抹茶を点てる体験をする",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "静かに茶を点てる所作に集中するだけで、気持ちが落ち着いてくる。",
+    "first_step": "抹茶と茶筅を用意するか、体験できる教室を探す。",
+    "link": null
+  },
+  {
+    "id": "act_152",
+    "name": "クラフトビールの飲み比べをする",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "銘柄ごとの違いを話しながら飲むと、会話も一緒に弾む。",
+    "first_step": "気になる銘柄を数種類、酒屋か通販で見繕う。",
+    "link": null
+  },
+  {
+    "id": "act_153",
+    "name": "郷土料理を再現して作ってみる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "知らない土地の味を再現してみると、行ったことのない場所に少し近づける。",
+    "first_step": "作ってみたい郷土料理を1つ決めてレシピを調べる。",
+    "link": null
+  },
+  {
+    "id": "act_154",
+    "name": "手作り味噌や梅干しなど発酵食品作りに挑戦する",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "needs_prep": true,
+    "pitch": "時間をかけて発酵していく過程を見守るのも、この趣味ならではの楽しみ。",
+    "first_step": "手作りしたい発酵食品を1つ決めて材料キットを用意する。",
+    "link": null
+  },
+  {
+    "id": "act_155",
+    "name": "フルーツ狩りに出かける",
+    "category": "food",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": false,
+    "pitch": "その場で食べる採れたての果物は、お店で買うのとは別物の美味しさ。",
+    "first_step": "近隣でその季節に収穫体験ができる農園を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_156",
+    "name": "高級ホテルのアフタヌーンティーを楽しむ",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "目にも楽しいスイーツを囲む時間は、それだけで贅沢な気分になれる。",
+    "first_step": "行ってみたいホテルのアフタヌーンティーを予約する。",
+    "link": null
+  },
+  {
+    "id": "act_157",
+    "name": "オーケストラやクラシックコンサートを聴きに行く",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      150
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "生の音の重なりを浴びる体験は、音源で聴くのとはまったく違う。",
+    "first_step": "行きたい公演を1つ選び、座席とチケットの有無を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_158",
+    "name": "歌舞伎や能など伝統芸能を観に行く",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "独特の様式美に触れると、知らなかった日本文化の奥深さに気づける。",
+    "first_step": "公演スケジュールを調べてチケットを確認する。",
+    "link": null
+  },
+  {
+    "id": "act_159",
+    "name": "野外彫刻や現代アート作品を見て回る",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "屋外に置かれた作品を歩いて巡るだけで、ちょっとした散策気分になる。",
+    "first_step": "近隣で野外彫刻やアート作品が見られる公園を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_160",
+    "name": "ミュージカルを観に行く",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "歌と物語が一体になった舞台は、観終わったあとの余韻が長く続く。",
+    "first_step": "上演中のミュージカルを調べてチケットを確認する。",
+    "link": null
+  },
+  {
+    "id": "act_161",
+    "name": "動物園でのんびり動物を観察する",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "family",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "動物をただ眺めているだけで、時間を忘れてリラックスできる。",
+    "first_step": "近くの動物園の営業時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_162",
+    "name": "街の有名建築を外から眺めて歩く",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "建物のデザインに目を向けて歩くだけで、見慣れた街が違って見える。",
+    "first_step": "気になる建築をいくつか調べて、歩けるルートを決める。",
+    "link": null
+  },
+  {
+    "id": "act_163",
+    "name": "オーディオブックや朗読劇をじっくり聴く",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "目を閉じて言葉だけに集中すると、想像力がいつも以上に働く。",
+    "first_step": "気になる作品のオーディオブックか朗読劇を1つ選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_164",
+    "name": "サーカスや大道芸のパフォーマンスを観る",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "目の前で繰り広げられる技の数々に、思わず声が出るほど引き込まれる。",
+    "first_step": "今月開催されるサーカスや大道芸イベントがないか探す。",
+    "link": null
+  },
+  {
+    "id": "act_165",
+    "name": "天体望遠鏡を使った観望会に参加する",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "needs_prep": false,
+    "pitch": "望遠鏡越しに見る星は、肉眼で見るのとは迫力がまったく違う。",
+    "first_step": "近隣の天文台や公民館が開く観望会を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_166",
+    "name": "ミニシアターで短編・単館系の映画を観る",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "普段選ばない作品に出会えるのが、こういう場所ならではの楽しみ。",
+    "first_step": "近くのミニシアターの上映スケジュールを調べる。",
+    "link": null
+  },
+  {
+    "id": "act_167",
+    "name": "骨董市や古美術展を見に行く",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "一つひとつの品に流れてきた時間を想像するだけで、面白い時間になる。",
+    "first_step": "週末に立つ骨董市や古美術展を1つ見つけて出かける。",
+    "link": null
+  },
+  {
+    "id": "act_168",
+    "name": "温泉やスーパー銭湯でゆっくり湯につかる",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "大きな湯船に浸かるだけで、自宅の風呂とは違う解放感がある。",
+    "first_step": "近くの温泉やスーパー銭湯の営業時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_169",
+    "name": "耳かきやイヤーエステでリラックスする",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      60
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "人にケアしてもらう時間は、それだけで肩の力がふっと抜ける。",
+    "first_step": "近くの耳かき専門店やイヤーエステの予約状況を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_170",
+    "name": "睡眠瞑想(ヨガニドラ)で深く体を休める",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      20,
+      40
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "横になったまま声に導かれるだけで、寝たとき以上に体がゆるむ。",
+    "first_step": "ヨガニドラの音声ガイドを1つ選んで横になる。",
+    "link": null
+  },
+  {
+    "id": "act_171",
+    "name": "デジタルデトックスで1日スマホを触らないと決める",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      240,
+      480
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "通知から離れるだけで、頭の中の余白がはっきり増える。",
+    "first_step": "家族や友人にスマホを見ない時間を伝えておく。",
+    "link": null
+  },
+  {
+    "id": "act_172",
+    "name": "星空や雲をただ眺めてぼーっとする",
+    "category": "rest",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      20,
+      40
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "空を見上げているだけの時間は、何も生み出さなくても十分価値がある。",
+    "first_step": "ベランダや庭など、空が見える場所に椅子を持っていく。",
+    "link": null
+  },
+  {
+    "id": "act_173",
+    "name": "ペットと一緒にソファでゴロゴロ過ごす",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "一緒にいるだけでいい存在がそばにいる時間は、それだけで癒やされる。",
+    "first_step": "予定を空けて、ペットと過ごす時間を確保する。",
+    "link": null
+  },
+  {
+    "id": "act_174",
+    "name": "お香を焚いて静かに過ごす",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "香りが部屋に満ちていく時間は、それだけで気持ちが落ち着いていく。",
+    "first_step": "好きな香りのお香とお香立てを用意する。",
+    "link": null
+  },
+  {
+    "id": "act_175",
+    "name": "整体やマッサージ店でプロにほぐしてもらう",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "自分では届かない凝りをほぐしてもらうと、体が一回り軽くなる。",
+    "first_step": "近くの整体やマッサージ店の予約状況を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_176",
+    "name": "温かい飲み物を片手に窓の外をぼんやり眺める",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      15,
+      30
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "特別なことをしなくても、湯気を眺めているだけで心が落ち着く。",
+    "first_step": "好きな飲み物を淹れて、窓の見える場所に座る。",
+    "link": null
+  },
+  {
+    "id": "act_177",
+    "name": "目的地を決めずにふらっと散歩する",
+    "category": "rest",
+    "indoor": false,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "どこへ行くか決めないまま歩くと、いつもと違う道に気づける。",
+    "first_step": "家を出て、気になった方向にとりあえず歩いてみる。",
+    "link": null
+  },
+  {
+    "id": "act_178",
+    "name": "好きな音楽をただ聴くためだけの時間を作る",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "何かをしながらではなく、聴くことだけに集中すると新しい発見がある。",
+    "first_step": "好きなアルバムを1枚選び、他のことをせず聴く時間を確保する。",
+    "link": null
+  },
+  {
+    "id": "act_179",
+    "name": "手紙や葉書を書いて誰かに送る",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      20,
+      40
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "手を動かして言葉を選ぶ時間は、メッセージアプリとは違う気持ちが込められる。",
+    "first_step": "便箋とペンを用意し、送りたい相手を1人思い浮かべる。",
+    "link": null
+  },
+  {
+    "id": "act_180",
+    "name": "遠くに住む友人に電話をかけてゆっくり話す",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "声を聞くだけで、しばらく会えていなかった距離がぐっと縮まる。",
+    "first_step": "話したい友人を1人思い浮かべて電話をかける。",
+    "link": null
+  },
+  {
+    "id": "act_181",
+    "name": "地域のお祭りやイベントに参加する",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": false,
+    "pitch": "地元の熱気に混ざるだけで、いつもの街が少し特別に感じられる。",
+    "first_step": "近隣で開催されるお祭りやイベントの日程を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_182",
+    "name": "パートナーとこれからのことをゆっくり話す時間を作る",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "予定を空けて向き合うだけで、普段話せないことも話しやすくなる。",
+    "first_step": "落ち着いて話せる時間と場所を決めて、パートナーを誘う。",
+    "link": null
+  },
+  {
+    "id": "act_183",
+    "name": "友人とスポーツ観戦を一緒に楽しむ",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "一緒に一喜一憂できる相手がいると、観戦の楽しさが何倍にもなる。",
+    "first_step": "観たい試合の日程を確認し、友人を誘う。",
+    "link": null
+  },
+  {
+    "id": "act_184",
+    "name": "ご近所さんと立ち話をしてみる",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      10,
+      20
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "ちょっとした会話でも、顔見知りが増えると暮らしが少し心強くなる。",
+    "first_step": "庭先や共用スペースで会ったときに、一言挨拶から始めてみる。",
+    "link": null
+  },
+  {
+    "id": "act_185",
+    "name": "同窓会や交流会を自分で企画してみる",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "声をかける側に回ってみると、思っていたより多くの人が集まってくれる。",
+    "first_step": "会いたいメンバーをリストアップして、候補日を連絡する。",
+    "link": null
+  },
+  {
+    "id": "act_186",
+    "name": "友人と一緒に新しいカフェを開拓する",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "一緒に「当たり」を探す過程も含めて、友人との時間が楽しくなる。",
+    "first_step": "行ったことのないカフェを友人と2〜3軒リストアップする。",
+    "link": null
+  },
+  {
+    "id": "act_187",
+    "name": "家族や友人と写真を撮りに出かける(フォトウォーク)",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "カメラを持って歩くだけで、いつもの景色が撮りたい被写体に変わる。",
+    "first_step": "カメラかスマホを持って、歩きたいエリアを決める。",
+    "link": null
+  },
+  {
+    "id": "act_188",
+    "name": "同じ趣味を持つ人たちのオフ会やイベントに参加する",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "好きなものを気兼ねなく語れる相手に出会えると、趣味がさらに楽しくなる。",
+    "first_step": "参加しているコミュニティのオフ会情報を調べて申し込む。",
+    "link": null
+  },
+  {
+    "id": "act_189",
+    "name": "友人の家に遊びに行って手料理をごちそうになる",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "誰かの手料理を囲むだけで、特別な準備がなくても十分なもてなしになる。",
+    "first_step": "仲のいい友人に連絡して、遊びに行く日程を決める。",
+    "link": null
+  },
+  {
+    "id": "act_190",
+    "name": "VRゲーム体験施設で非日常を味わう",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "現実にはない世界に没入できる体験は、何度やっても新鮮な驚きがある。",
+    "first_step": "近くのVR体験施設を調べて予約する。",
+    "link": null
+  },
+  {
+    "id": "act_191",
+    "name": "フォレストアドベンチャー(アスレチック)で体を動かして遊ぶ",
+    "category": "play",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "木々の間を渡っていくスリルは、大人になっても十分楽しめる。",
+    "first_step": "近隣のフォレストアドベンチャー施設を調べて予約する。",
+    "link": null
+  },
+  {
+    "id": "act_192",
+    "name": "けん玉やコマなど昔ながらの遊びに挑戦する",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "シンプルな遊びほど、できるようになったときの嬉しさが大きい。",
+    "first_step": "家にあるけん玉やコマを探すか、手頃なものを1つ買う。",
+    "link": null
+  },
+  {
+    "id": "act_193",
+    "name": "縁日風の射的や輪投げを楽しむ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "単純なルールだからこそ、大人も子どもも一緒に本気になれる。",
+    "first_step": "射的や輪投げができるアミューズメント施設を探す。",
+    "link": null
+  },
+  {
+    "id": "act_194",
+    "name": "ジグソーパズルを1つ完成させる",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "ピースがはまっていく手応えは、地味だけど確実な達成感になる。",
+    "first_step": "好きな絵柄のジグソーパズルを1つ選んで用意する。",
+    "link": null
+  },
+  {
+    "id": "act_195",
+    "name": "麻雀を打つ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "手牌を組み立てていく駆け引きは、何度やっても飽きない奥深さがある。",
+    "first_step": "雀荘を予約するか、友人にメンバーを声かけする。",
+    "link": null
+  },
+  {
+    "id": "act_196",
+    "name": "ダーツバーでダーツを楽しむ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "的を狙って集中する時間は、仕事の考え事を忘れさせてくれる。",
+    "first_step": "近くのダーツバーの営業時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_197",
+    "name": "パーティーゲームアプリで大人数で盛り上がる",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "スマホ1台あれば準備いらずで盛り上がれる、集まりの強い味方。",
+    "first_step": "人数に合ったパーティーゲームアプリを1つインストールする。",
+    "link": null
+  },
+  {
+    "id": "act_198",
+    "name": "釣り堀で気軽に釣りを楽しむ",
+    "category": "play",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "道具の準備がいらない分、思い立ったその日にすぐ楽しめる。",
+    "first_step": "近くの釣り堀の料金と営業時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_199",
+    "name": "トレーディングカードゲームの対戦会に参加する",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "知らない相手との対戦は、いつもと違う緊張感と発見がある。",
+    "first_step": "参加できるカードゲームショップの対戦会を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_200",
+    "name": "エアホッケーやビリヤードで遊ぶ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "単純な駆け引きの勝負は、話が弾むきっかけにもなる。",
+    "first_step": "近くのゲームセンターやバーでプレイできる場所を探す。",
     "link": null
   }
 ]

@@ -4,7 +4,7 @@ import { CATEGORIES, loadCatalog } from "./catalog";
 describe("catalog", () => {
   it("data/activities.json がスキーマ通りに読み込める", () => {
     const catalog = loadCatalog();
-    expect(catalog.length).toBeGreaterThanOrEqual(100);
+    expect(catalog.length).toBeGreaterThanOrEqual(200);
   });
 
   it("id が重複していない", () => {
