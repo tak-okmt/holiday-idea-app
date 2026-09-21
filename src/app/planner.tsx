@@ -53,6 +53,7 @@ type Screen =
   | { step: "question"; index: number }
   | { step: "loading" }
   | { step: "result"; state: State; suggestion: SuggestionView }
+  | { step: "decided"; suggestion: SuggestionView }
   | { step: "empty" }
   | { step: "error"; message: string };
 
@@ -194,6 +195,24 @@ export function Planner() {
     );
   }
 
+  if (screen.step === "decided") {
+    const s = screen.suggestion;
+    return (
+      <div className={styles.page}>
+        <h1 className={styles.heading}>決まり！</h1>
+        <div className={styles.card}>
+          <div className={styles.cardCategory}>{s.category}</div>
+          <h3 className={styles.cardTitle}>{s.name}</h3>
+          <p className={styles.cardFirstStep}>最初の一歩: {s.firstStep}</p>
+        </div>
+        <p className={styles.decidedMessage}>良い休日を！</p>
+        <button type="button" className={styles.linkButton} onClick={handleReset}>
+          また最初から選ぶ
+        </button>
+      </div>
+    );
+  }
+
   if (screen.step === "empty") {
     return (
       <div className={styles.page}>
@@ -218,13 +237,22 @@ export function Planner() {
           <p className={styles.cardFirstStep}>最初の一歩: {s.firstStep}</p>
 
           {!showReasonPicker ? (
-            <button
-              type="button"
-              className={styles.rejectButton}
-              onClick={() => setShowReasonPicker(true)}
-            >
-              違うな
-            </button>
+            <div className={styles.actionRow}>
+              <button
+                type="button"
+                className={styles.acceptButton}
+                onClick={() => setScreen({ step: "decided", suggestion: s })}
+              >
+                これにする！
+              </button>
+              <button
+                type="button"
+                className={styles.rejectButton}
+                onClick={() => setShowReasonPicker(true)}
+              >
+                違うな
+              </button>
+            </div>
           ) : (
             <>
               <ReasonPicker

@@ -139,6 +139,32 @@
   line-height: 1.5;
 }
 
+.actionRow {
+  display: flex;
+  gap: 10px;
+}
+
+.acceptButton {
+  flex: 1;
+  min-height: 48px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #2f9e44;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.decidedMessage {
+  text-align: center;
+  font-size: 1rem;
+  color: #2f9e44;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
 .rejectButton {
   min-height: 40px;
   padding: 8px 16px;
