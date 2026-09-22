@@ -3,7 +3,7 @@ import type { State, Suggestion } from "@/engine/types";
 import { createLogClient } from "./supabase";
 
 /**
- * ログ保存はアプリの動作に必須ではない。SUPABASE_URL/SUPABASE_ANON_KEY未設定時や
+ * ログ保存はアプリの動作に必須ではない。SUPABASE_URL/SUPABASE_PUBLISHABLE_KEY未設定時や
  * 書き込み失敗時はコンソールに警告するだけで、呼び出し元には例外を投げない
  * (Jevの障害でアプリを止めない、と同じ方針)。
  */

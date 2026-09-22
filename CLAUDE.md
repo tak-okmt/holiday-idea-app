@@ -211,7 +211,8 @@
 ### 2026-09-21 週末7（進行中: ログ実装まで完了、デプロイは開発者作業待ち）
 - **GitHubリポジトリ作成**: `tak-okmt/holiday-idea-app`（非公開）を作成しpush済み。
 - **Supabaseスキーマ設計**（`supabase/schema.sql`）: `sessions` / `answers` / `suggestions` / `rejections` / `decisions` の5テーブル。ログインなしのため、クライアント側で`crypto.randomUUID()`生成した匿名`session_id`で紐付ける。個人特定情報(IP・氏名等)は保存しない。RLSで**anonロールはINSERTのみ許可**（閲覧・更新・削除不可）にして、キーが漏れてもログを読まれない設計にした。
-- **ログ実装**: `@supabase/supabase-js`を追加。`src/lib/supabase.ts`（クライアント生成、`SUPABASE_URL`/`SUPABASE_ANON_KEY`未設定ならnullを返す）と`src/lib/log.ts`（書き込み関数、失敗しても例外を投げずconsole.warnのみ）を実装。`src/app/actions.ts`から呼び出し、`fetchSuggestions`/`rejectAndFetch`で回答・提案・却下を、新設した`logDecision`アクションで「これにする！」を記録する。**ログの障害でアプリを止めない**方針はJevと同じ。
+- **ログ実装**: `@supabase/supabase-js`を追加。`src/lib/supabase.ts`（クライアント生成、`SUPABASE_URL`/`SUPABASE_PUBLISHABLE_KEY`未設定ならnullを返す）と`src/lib/log.ts`（書き込み関数、失敗しても例外を投げずconsole.warnのみ）を実装。`src/app/actions.ts`から呼び出し、`fetchSuggestions`/`rejectAndFetch`で回答・提案・却下を、新設した`logDecision`アクションで「これにする！」を記録する。**ログの障害でアプリを止めない**方針はJevと同じ。
+  - 【重要】キーは**Publishable key**を使う（レガシーの`anon` keyは2026年末に廃止予定。Supabase公式ドキュメントで確認済み）。サーバー側では一般的に`Secret key`(旧`service_role`、RLSを無視する管理者キー)が推奨されるが、このアプリはINSERTのみでRLSに守られた設計を活かしたいため、あえてPublishable key(anonロール)を採用した。RLSはanonロールに「anonロールはINSERTのみ許可」を設定済みなので、Publishable keyでもそのまま機能する。
   - `planner.tsx`に匿名`session_id`（コンポーネント初期化時に発行、「最初からやり直す」の度に新しいIDへ再発行）と`round`（0=初回提案、以降「違うな」のたびに+1）を追加。
   - CLI（`recommend-cli.ts`）は開発者のテスト実行のため、ログ対象に含めていない（実ユーザーの行動と混ざらないように）。
   - Supabase未設定（`.env.local`にキーなし）でも`pnpm build`・ブラウザでの動作とも問題なし。「これにする！」を押してもログ関数がnullチェックで即returnし、UIをブロックしないことを実機確認済み。
@@ -219,9 +220,9 @@
 - **開発者に依頼したいこと（ここから先は自分では進められない）**:
   1. supabase.comで新規プロジェクトを作成
   2. SQL Editorで`supabase/schema.sql`の内容を実行
-  3. Project Settings > API から Project URL と anon public キーを取得し、`.env.local`に`SUPABASE_URL` / `SUPABASE_ANON_KEY`として設定
+  3. Project Settings > API Keys から Project URL と **Publishable key**（レガシーのanon keyではない）を取得し、`.env.local`に`SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`として設定
   4. vercel.comでアカウント作成（未作成の場合）し、`tak-okmt/holiday-idea-app`をインポート
-  5. Vercelのプロジェクト設定で環境変数（`TYPESAFE_API_KEY` / `SUPABASE_URL` / `SUPABASE_ANON_KEY`）を設定してデプロイ
+  5. Vercelのプロジェクト設定で環境変数（`TYPESAFE_API_KEY` / `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`）を設定してデプロイ
 - テスト・lint・型チェック・ビルドは全て通過。ロードマップのチェックは、実際にログがSupabaseに書き込めること・Vercelへのデプロイが完了することを確認してから入れる。
 
 <!-- BEGIN:nextjs-agent-rules -->
