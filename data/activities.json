@@ -850,7 +850,7 @@
   },
   {
     "id": "act_031",
-    "name": "家計簿や資産管理を見直して家計オンライン講座を受ける",
+    "name": "1年分の家計を振り返って固定費を見直す",
     "category": "learning",
     "indoor": true,
     "with": [
@@ -871,8 +871,8 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "後回しにしがちなお金の整理に、まとまった時間で向き合える。",
-    "first_step": "家計簿アプリを開くか、家計管理の入門講座を1つ探す。",
+    "pitch": "平日は手をつけられないお金の棚卸しも、時間のある休日なら一気に片づく。",
+    "first_step": "カードや口座の明細を開いて、毎月引き落とされている固定費を書き出す。",
     "link": null
   },
   {
@@ -1182,7 +1182,7 @@
   },
   {
     "id": "act_043",
-    "name": "近所の坂道や階段を使って軽い筋トレをする",
+    "name": "近所の坂道や階段を使って息が上がるまで動く",
     "category": "sports",
     "indoor": false,
     "with": [
@@ -1202,7 +1202,7 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "道具がなくても、坂道や階段だけで手軽に体を追い込める。",
+    "pitch": "道具も場所代もいらないのに、10分も往復すれば汗が出るほど効く。",
     "first_step": "近所で使えそうな坂道か階段を1か所見つけておく。",
     "link": null
   },
@@ -1258,7 +1258,7 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "気になっていたお店を巡るだけで、休日らしい満足感が得られる。",
+    "pitch": "食べたいものを目当てに歩く一日は、それだけで休日らしい満足感がある。",
     "first_step": "行きたいお店を2〜3軒リストアップしてルートを決める。",
     "link": null
   },
@@ -1599,7 +1599,7 @@
     ],
     "needs_prep": false,
     "pitch": "外出しなくても、集中して1本観きるだけで満足感が得られる。",
-    "first_step": "気になっていた映画を配信サービスで1本選ぶ。",
+    "first_step": "配信サービスの「あとで見る」リストを開いて、今日観る1本を決める。",
     "link": null
   },
   {
@@ -2069,7 +2069,7 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "座っているだけで、こり固まった体をゆるめてもらえる。",
+    "pitch": "機械やグッズに任せるだけで、自分の手では届かないこりがゆるんでいく。",
     "first_step": "マッサージチェアのあるお店を調べるか、家の指圧グッズを用意する。",
     "link": null
   },
@@ -2210,7 +2210,7 @@
     ],
     "needs_prep": true,
     "pitch": "好きなゲームを囲むだけで、自然と会話も盛り上がる。",
-    "first_step": "友人に声をかけて日程を決め、遊ぶゲームを1つ用意する。",
+    "first_step": "みんなで遊べるゲームを1つ決めてから、集まれそうな友人に声をかける。",
     "link": null
   },
   {
@@ -3583,18 +3583,20 @@
   },
   {
     "id": "act_129",
-    "name": "タイピング速度向上トレーニングに挑戦する",
+    "name": "防災の備えを点検して足りないものを補充する",
     "category": "learning",
     "indoor": true,
     "with": [
-      "solo"
+      "solo",
+      "partner",
+      "family"
     ],
     "energy": "low",
     "minutes": [
-      20,
-      40
+      60,
+      120
     ],
-    "budget": "free",
+    "budget": "under3000",
     "weather_ok": [
       "sunny",
       "cloudy",
@@ -3604,8 +3606,8 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "数字で伸びが見える練習は、地味だけど達成感がわかりやすい。",
-    "first_step": "タイピング練習サイトで現在の速度を測ってみる。",
+    "pitch": "いつかやろうと思ったまま先延ばしにしていたことを、今日のうちに終わらせられる。",
+    "first_step": "非常用の持ち出し袋と備蓄の食料を出して、期限が切れているものを探す。",
     "link": null
   },
   {
@@ -3632,7 +3634,7 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "ルールを覚えるところから含めて、じわじわとのめり込める世界。",
+    "pitch": "一手ずつ考えているうちに、頭の中が盤面のことだけになっていく。",
     "first_step": "入門書か解説動画でルールをひと通り確認する。",
     "link": null
   },
@@ -3661,7 +3663,7 @@
     ],
     "needs_prep": false,
     "pitch": "行ったことのない街を地図上で歩き回るだけで、ちょっとした旅気分になる。",
-    "first_step": "気になっている地名を1つ思い浮かべて地図アプリを開く。",
+    "first_step": "行ってみたい国か町の名前を1つ決めて、地図アプリで検索する。",
     "link": null
   },
   {
@@ -4034,7 +4036,7 @@
   },
   {
     "id": "act_145",
-    "name": "フットバッグやスラックラインで公園遊びをする",
+    "name": "公園で縄跳びを跳んで短時間で汗をかく",
     "category": "sports",
     "indoor": false,
     "with": [
@@ -4043,8 +4045,8 @@
     ],
     "energy": "high",
     "minutes": [
-      30,
-      60
+      20,
+      45
     ],
     "budget": "free",
     "weather_ok": [
@@ -4055,8 +4057,8 @@
       "all"
     ],
     "needs_prep": true,
-    "pitch": "道具さえあれば、公園でふらっと始められる気軽な運動遊び。",
-    "first_step": "スラックラインかフットバッグを持って、広めの公園に向かう。",
+    "pitch": "縄が1本あれば始められるのに、10分も跳べば息が上がるほどの運動になる。",
+    "first_step": "縄跳びを1本用意して、足元が平らで人の少ない広場を探す。",
     "link": null
   },
   {
@@ -4372,7 +4374,7 @@
     ],
     "needs_prep": true,
     "pitch": "目にも楽しいスイーツを囲む時間は、それだけで贅沢な気分になれる。",
-    "first_step": "行ってみたいホテルのアフタヌーンティーを予約する。",
+    "first_step": "季節ごとに内容が変わるので、今の時期のメニューを調べて席を予約する。",
     "link": null
   },
   {
@@ -4817,7 +4819,7 @@
     ],
     "needs_prep": false,
     "pitch": "空を見上げているだけの時間は、何も生み出さなくても十分価値がある。",
-    "first_step": "ベランダや庭など、空が見える場所に椅子を持っていく。",
+    "first_step": "空がよく見える場所を1つ決めて、寝転がれるものを敷く。",
     "link": null
   },
   {
@@ -5006,13 +5008,13 @@
       "all"
     ],
     "needs_prep": true,
-    "pitch": "手を動かして言葉を選ぶ時間は、メッセージアプリとは違う気持ちが込められる。",
+    "pitch": "書くのに時間がかかるぶん、メッセージアプリでは伝わらないものが残る。",
     "first_step": "便箋とペンを用意し、送りたい相手を1人思い浮かべる。",
     "link": null
   },
   {
     "id": "act_180",
-    "name": "遠くに住む友人に電話をかけてゆっくり話す",
+    "name": "しばらく連絡していない人に思いきって連絡してみる",
     "category": "social",
     "indoor": true,
     "with": [
@@ -5033,8 +5035,8 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "声を聞くだけで、しばらく会えていなかった距離がぐっと縮まる。",
-    "first_step": "話したい友人を1人思い浮かべて電話をかける。",
+    "pitch": "気になりながら放っていた相手ほど、一度連絡してしまえば驚くほど気が軽くなる。",
+    "first_step": "連絡先をさかのぼって、やり取りが1年以上止まっている人を1人選ぶ。",
     "link": null
   },
   {
@@ -5095,7 +5097,7 @@
   },
   {
     "id": "act_183",
-    "name": "友人とスポーツ観戦を一緒に楽しむ",
+    "name": "試合の中継を友人と集まって観る",
     "category": "social",
     "indoor": true,
     "with": [
@@ -5116,8 +5118,8 @@
       "all"
     ],
     "needs_prep": true,
-    "pitch": "一緒に一喜一憂できる相手がいると、観戦の楽しさが何倍にもなる。",
-    "first_step": "観たい試合の日程を確認し、友人を誘う。",
+    "pitch": "同じ場面で一緒に声が出る相手がいると、家で観る試合でも熱の入り方が変わる。",
+    "first_step": "観たい試合の開始時間を調べて、集まる場所と持ち寄る飲み物を決める。",
     "link": null
   },
   {
@@ -5229,7 +5231,7 @@
   },
   {
     "id": "act_188",
-    "name": "同じ趣味を持つ人たちのオフ会やイベントに参加する",
+    "name": "同じ趣味の人が集まるサークルや教室を見学に行く",
     "category": "social",
     "indoor": true,
     "with": [
@@ -5250,8 +5252,8 @@
       "all"
     ],
     "needs_prep": true,
-    "pitch": "好きなものを気兼ねなく語れる相手に出会えると、趣味がさらに楽しくなる。",
-    "first_step": "参加しているコミュニティのオフ会情報を調べて申し込む。",
+    "pitch": "同じものを好きな人が集まる場所に行くと、一人で続けるより先に進める。",
+    "first_step": "自分の趣味に関わるサークルや教室が近くにないか探して、見学を申し込む。",
     "link": null
   },
   {
@@ -5478,7 +5480,7 @@
       "all"
     ],
     "needs_prep": false,
-    "pitch": "的を狙って集中する時間は、仕事の考え事を忘れさせてくれる。",
+    "pitch": "一投ごとに結果が出る単純さが、余計な考え事を追い出してくれる。",
     "first_step": "近くのダーツバーの営業時間を確認する。",
     "link": null
   },
@@ -5590,7 +5592,2023 @@
     ],
     "needs_prep": false,
     "pitch": "単純な駆け引きの勝負は、話が弾むきっかけにもなる。",
-    "first_step": "近くのゲームセンターやバーでプレイできる場所を探す。",
+    "first_step": "ビリヤード台かエアホッケー台が置いてある店を探して営業時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_201",
+    "name": "工具を借りて棚やラックをDIYで作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      300
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "寸法どおりに切って組むだけで、部屋にぴったり収まる家具が手に入る。",
+    "first_step": "置きたい場所の寸法を測って、木材のカットを頼めるホームセンターを調べる。",
+    "link": null
+  },
+  {
+    "id": "act_202",
+    "name": "シルクスクリーンでオリジナルのTシャツを刷る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "自分で描いた図柄が布に刷り上がる瞬間は、何枚やっても声が出る。",
+    "first_step": "刷りたい図柄を1つ描いてから、プリント体験ができる工房の空き枠を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_203",
+    "name": "子どもと家にある材料で工作をする",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "空き箱と紙とテープがあれば、買い出しに出ずにその場で始められる。",
+    "first_step": "捨てる予定の空き箱や牛乳パックを集めて、テーブルの上に広げる。",
+    "link": null
+  },
+  {
+    "id": "act_204",
+    "name": "ブロック玩具で家族それぞれの作品を組み立てる",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "同じ箱の中身から作っても、できあがるものが人によってまるで違うのが面白い。",
+    "first_step": "家にあるブロックを全部出して、今日作るテーマを1つだけ決める。",
+    "link": null
+  },
+  {
+    "id": "act_205",
+    "name": "ドライフラワーを瓶に詰めてハーバリウムを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "花を選んで詰めていく作業は静かなのに、飾ったあともずっと目に楽しい。",
+    "first_step": "専用のオイルと瓶、好きな色のドライフラワーを買い揃える。",
+    "link": null
+  },
+  {
+    "id": "act_206",
+    "name": "調香体験で自分だけの香りを作る",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "何十種類もの香りを嗅ぎ分けているうち、自分の好みがはっきりしてくる。",
+    "first_step": "香水やルームスプレーを調合できる体験教室を探して予約する。",
+    "link": null
+  },
+  {
+    "id": "act_207",
+    "name": "撮りためた写真を選んでフォトブックに仕立てる",
+    "category": "craft",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "スマホの中で眠ったままの写真も、形にすると見返す機会が一気に増える。",
+    "first_step": "この1年の写真フォルダから、残したい30枚を選び出す。",
+    "link": null
+  },
+  {
+    "id": "act_208",
+    "name": "ラフティングで川を下る",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "全員で息を合わせないとボートが進まないので、終わるころには妙な一体感がある。",
+    "first_step": "川下りのツアーを探して、水着とタオルを持って参加できる日を押さえる。",
+    "link": null
+  },
+  {
+    "id": "act_209",
+    "name": "シュノーケリングで海の中をのぞく",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": true,
+    "pitch": "顔をつけた瞬間に景色が切り替わる感覚は、映像で見るのとはまるで違う。",
+    "first_step": "道具を借りられる体験ツアーを探し、泳ぎに自信がなくても参加できるか確認する。",
+    "link": null
+  },
+  {
+    "id": "act_210",
+    "name": "潮干狩りで貝を掘る",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring"
+    ],
+    "needs_prep": true,
+    "pitch": "掘れば掘るほど採れるので、子どもも大人も無言で夢中になってしまう。",
+    "first_step": "潮の満ち引きの表を調べて、干潮の時間に合わせた予定を組む。",
+    "link": null
+  },
+  {
+    "id": "act_211",
+    "name": "そり滑りや雪遊びで一日過ごす",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "滑って転んでを繰り返すだけなのに、雪の上だと何時間でも遊べてしまう。",
+    "first_step": "そり遊びができる雪の広場を探して、防水の手袋と着替えを用意する。",
+    "link": null
+  },
+  {
+    "id": "act_212",
+    "name": "スノーシューで冬の森を歩く",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "雪が積もった森は音が吸い込まれていて、同じ道でも夏とは別の場所に見える。",
+    "first_step": "スノーシューを貸し出しているガイドツアーを探して、防寒着を揃える。",
+    "link": null
+  },
+  {
+    "id": "act_213",
+    "name": "焚き火を囲んで火を眺める",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "火を見ているあいだは会話が途切れても気まずくならないのが、不思議と心地いい。",
+    "first_step": "焚き火ができる場所のルールを確認して、薪と着火剤を用意する。",
+    "link": null
+  },
+  {
+    "id": "act_214",
+    "name": "観葉植物を1鉢選んで部屋に迎える",
+    "category": "nature",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "緑がひとつ部屋にあるだけで、水をやるために早く起きる理由が増える。",
+    "first_step": "日当たりと置き場所を先に決めて、その環境で育てやすい品種を店で相談する。",
+    "link": null
+  },
+  {
+    "id": "act_215",
+    "name": "蛍が見られる水辺まで足を運ぶ",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": false,
+    "pitch": "見られる時期も時間帯も短いぶん、行けた日のことは長く記憶に残る。",
+    "first_step": "蛍が出る時期を調べて、暗くなってから安全に歩ける水辺を選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_216",
+    "name": "日帰りのグランピング施設で自然の中に一日いる",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      240,
+      480
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "道具も食材も用意してもらえるので、外にいる時間をまるごと楽しむほうに使える。",
+    "first_step": "日帰りプランのある施設を探して、手ぶらで行けるかどうかを確認する。",
+    "link": null
+  },
+  {
+    "id": "act_217",
+    "name": "景色のいい道を選んでドライブに出る",
+    "category": "nature",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "着いた先より道中のほうが記憶に残る、という休日の使い方もある。",
+    "first_step": "海沿いか山沿いのルートを1つ選んで、途中で寄る場所を2か所だけ決める。",
+    "link": null
+  },
+  {
+    "id": "act_218",
+    "name": "生成AIで絵や物語を作ってみる",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "思ったものが出てこない指示を直していく過程そのものが、いちばん面白い遊びになる。",
+    "first_step": "作ってみたいものを一文で書き出して、画像か文章の生成サービスを1つ開く。",
+    "link": null
+  },
+  {
+    "id": "act_219",
+    "name": "工場見学に申し込んで作られる現場を見る",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "毎日使っているものができる工程を見ると、同じ商品が少し違って見えてくる。",
+    "first_step": "見学を受け付けている工場を探して、予約が必要かどうかを確認する。",
+    "link": null
+  },
+  {
+    "id": "act_220",
+    "name": "子どもと家で理科の実験をやってみる",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      45,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "台所にあるもので結果が変わるので、子どもの「なんで」に付き合いやすい。",
+    "first_step": "重曹や酢など家にある材料でできる実験を1つ選び、足りないものを買い足す。",
+    "link": null
+  },
+  {
+    "id": "act_221",
+    "name": "家族に昔の話を聞いて書き留める",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "聞けるうちに聞いておかないと、二度と確かめられなくなる話が意外と多い。",
+    "first_step": "聞いてみたいことを3つメモして、録音していいか本人に断ってから始める。",
+    "link": null
+  },
+  {
+    "id": "act_222",
+    "name": "楽器を出してきて1フレーズ弾けるようにする",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "曲を通しで弾けなくても、好きな一節が形になるだけで十分うれしい。",
+    "first_step": "手元にある楽器を1つ出して、弾きたい曲のいちばん好きな数小節を探す。",
+    "link": null
+  },
+  {
+    "id": "act_223",
+    "name": "ガイドつきのツアーで街の成り立ちを聞きながら歩く",
+    "category": "learning",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "案内してくれる人がいるだけで、何度も通った道に隠れていた話が次々に出てくる。",
+    "first_step": "住んでいる地域か行きたい街のまち歩きツアーを探して、集合時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_224",
+    "name": "書店を何軒かはしごして次に読む本を選ぶ",
+    "category": "learning",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "店ごとに並べ方が違うので、探してもいなかった本のほうが手に取りたくなる。",
+    "first_step": "品ぞろえの傾向が違う書店を2軒選んで、回る順番を決めて出かける。",
+    "link": null
+  },
+  {
+    "id": "act_225",
+    "name": "ピックルボールをやってみる",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "ラケット競技のなかでは覚えることが少なく、初日から打ち合いが続く。",
+    "first_step": "体験会か貸しコートを探して、ラケットを借りられるかどうか確認する。",
+    "link": null
+  },
+  {
+    "id": "act_226",
+    "name": "フットゴルフでコースを回る",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "サッカーの経験がなくても蹴れば成立するので、実力差があるほど盛り上がる。",
+    "first_step": "フットゴルフができるコースを探して、人数分の枠を予約する。",
+    "link": null
+  },
+  {
+    "id": "act_227",
+    "name": "モルックで的当ての勝負をする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      45,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "体力より狙いと計算がものを言うので、年齢が離れていても同じ土俵で戦える。",
+    "first_step": "モルックのセットを借りるか買って、木の棒を投げられる広さの場所を探す。",
+    "link": null
+  },
+  {
+    "id": "act_228",
+    "name": "スキーやスノーボードでゲレンデを滑る",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      300,
+      480
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "滑り出してしまえば寒さを忘れるほど集中でき、一日があっという間に終わる。",
+    "first_step": "道具をレンタルできるゲレンデを探して、行き方と初心者コースの有無を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_229",
+    "name": "子どもとキャッチボールをする",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      30,
+      60
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "向かい合って投げ合っていると、面と向かって話すより言葉が出てきやすい。",
+    "first_step": "グローブとボールを出して、ボール遊びをしていい広さの公園を選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_230",
+    "name": "レンタルカートでサーキットを走る",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "地面すれすれを走るので、実際の速度以上に体感が速くて記録に本気になる。",
+    "first_step": "免許がなくても乗れるカート場を探して、走行できる時間帯を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_231",
+    "name": "体育館を借りてバレーボールやドッジボールをする",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "学校でやったきりの競技ほど、大人になってからのほうが加減がわかって楽しい。",
+    "first_step": "地域の体育館の個人利用枠か貸切の空きを調べて、必要な人数を集める。",
+    "link": null
+  },
+  {
+    "id": "act_232",
+    "name": "ホットヨガの体験レッスンで汗を流す",
+    "category": "sports",
+    "indoor": true,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "指示どおりに動くだけでいいのに、終わるころには運動した日の疲れ方になる。",
+    "first_step": "体験レッスンのあるスタジオを探して、必要な持ち物を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_233",
+    "name": "ランニングやウォーキングの大会に出てみる",
+    "category": "sports",
+    "indoor": false,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "締め切りのある目標がひとつあるだけで、それまでの休日の使い方まで変わってくる。",
+    "first_step": "数か月先の大会を探して、いちばん距離の短い部門の申込期限を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_234",
+    "name": "ホットプレートを囲んで焼きながら食べる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "作る人と食べる人に分かれないので、誰かひとりが台所にこもらずに済む。",
+    "first_step": "焼くものを3種類だけ決めて、ホットプレートを出せる場所を空けておく。",
+    "link": null
+  },
+  {
+    "id": "act_235",
+    "name": "鍋を囲んでゆっくり食べる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "needs_prep": true,
+    "pitch": "切って入れるだけなのに、囲んでいるうちに話が長くなるのが鍋のいいところ。",
+    "first_step": "食べたい鍋の味を1つ決めて、人数分の具材を買いに行く。",
+    "link": null
+  },
+  {
+    "id": "act_236",
+    "name": "手巻き寿司をみんなで巻いて食べる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "好きな具を好きなだけ巻けるので、子どもから大人まで同じ食卓で満足できる。",
+    "first_step": "刺身と野菜を数種類買って、酢飯の分量を先に調べておく。",
+    "link": null
+  },
+  {
+    "id": "act_237",
+    "name": "そば打ち体験で自分の一杯を打つ",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "こねて延ばして切るまで全部やると、いつも食べているそばの見え方が変わる。",
+    "first_step": "そば打ちができる教室を探して、打った分を持ち帰れるか確認する。",
+    "link": null
+  },
+  {
+    "id": "act_238",
+    "name": "食べたことのない国の料理の店に入ってみる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "知らない名前の料理を頼むだけで、遠くまで行かなくても知らない味に出会える。",
+    "first_step": "行ける範囲で、まだ食べたことのない国の料理を出す店を1軒見つける。",
+    "link": null
+  },
+  {
+    "id": "act_239",
+    "name": "流しそうめんをやってみる",
+    "category": "food",
+    "indoor": false,
+    "with": [
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": true,
+    "pitch": "流れてくるのを取るだけの単純な仕掛けなのに、大人のほうが本気になってしまう。",
+    "first_step": "流しそうめんの器具を用意して、水を流せる場所と排水の当てを決める。",
+    "link": null
+  },
+  {
+    "id": "act_240",
+    "name": "酒蔵やワイナリーを見学して造り手の話を聞く",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "造っている現場を見てから飲むと、同じ一杯でも味の受け取り方が変わる。",
+    "first_step": "試飲つきの回がある酒蔵かワイナリーを探して、参加できる日を予約する。",
+    "link": null
+  },
+  {
+    "id": "act_241",
+    "name": "ビュッフェで好きなものを好きなだけ食べる",
+    "category": "food",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "何を頼むか迷わなくていいぶん、一緒にいる相手との話に集中できる。",
+    "first_step": "気になるビュッフェの時間帯と料金を調べて、席を予約する。",
+    "link": null
+  },
+  {
+    "id": "act_242",
+    "name": "夜の動物園や水族館のナイトイベントに行く",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": true,
+    "pitch": "昼は寝ている生き物が動き出すので、同じ場所でも知らない顔が見られる。",
+    "first_step": "夜間開園をしている日を調べて、チケットの買い方を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_243",
+    "name": "イルミネーションを見に行く",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "winter"
+    ],
+    "needs_prep": false,
+    "pitch": "寒さを我慢して見に行くぶん、その場の明るさがよけいに印象に残る。",
+    "first_step": "点灯している期間と時間帯を調べて、暖かい上着を出しておく。",
+    "link": null
+  },
+  {
+    "id": "act_244",
+    "name": "花火大会を見に行く",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": false,
+    "pitch": "見上げている数十分のあいだは、その場にいる全員が同じものを見ている。",
+    "first_step": "打ち上げの時間と混みにくい観覧場所を調べて、敷物を用意する。",
+    "link": null
+  },
+  {
+    "id": "act_245",
+    "name": "スタジアムや競技場でプロの試合を生で観る",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "needs_prep": true,
+    "pitch": "中継には映らない場外の動きや音まで届くので、同じ試合でも情報量がまるで違う。",
+    "first_step": "近い日程の試合を調べて、座席の種類と価格を見比べてチケットを取る。",
+    "link": null
+  },
+  {
+    "id": "act_246",
+    "name": "御朱印を集めながら神社仏閣をめぐる",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      300
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "一冊たまっていくと、行った場所と季節がそのまま記録として残る。",
+    "first_step": "御朱印帳を1冊用意して、歩いて回れる距離の社寺を2〜3か所選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_247",
+    "name": "相撲や格闘技を会場で観る",
+    "category": "appreciation",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "一瞬で決まる勝負を生で見ると、画面越しでは伝わらない体の大きさに驚く。",
+    "first_step": "開催の日程とチケットの発売日を調べて、見やすい席の価格を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_248",
+    "name": "夜景の見える場所まで行って街の灯りを眺める",
+    "category": "appreciation",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "自分が暮らしている街も、高いところから見下ろすと知らない景色のように思える。",
+    "first_step": "無料で入れる展望スペースか高台を探して、日が沈む時刻を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_249",
+    "name": "サウナと水風呂を往復してしっかり整える",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "熱さと冷たさを行き来したあとの休憩は、何もしていないのに深く休めている。",
+    "first_step": "水風呂と休憩用の椅子がそろっている施設を探して、混まない時間を選ぶ。",
+    "link": null
+  },
+  {
+    "id": "act_250",
+    "name": "貸切のプライベートサウナでゆっくり過ごす",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      150
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "周りを気にせず温度も時間も好きにできるので、話しながらでも休める。",
+    "first_step": "貸切で使えるサウナを探して、人数と利用時間の枠を予約する。",
+    "link": null
+  },
+  {
+    "id": "act_251",
+    "name": "日帰りの温泉プランで昼から湯と食事を楽しむ",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      240,
+      360
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "宿を取らなくても、湯と食事がそろえば一泊したくらいには気持ちが切り替わる。",
+    "first_step": "食事つきの日帰りプランがある宿を探して、利用できる時間帯を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_252",
+    "name": "ホテルのデイユースで昼のあいだだけ部屋にこもる",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "家事も来客もない部屋にいるだけで、自宅では取れない種類の休みが取れる。",
+    "first_step": "日中だけ使えるデイユースのプランを探して、入室できる時間を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_253",
+    "name": "フェイスパックや爪の手入れで体をひと通り整える",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "普段は後回しにしている手入れをまとめて済ませると、見た目より先に気分が変わる。",
+    "first_step": "使いかけのケア用品を全部出して、今日やる順番を決める。",
+    "link": null
+  },
+  {
+    "id": "act_254",
+    "name": "寝具やパジャマを見直して眠る環境を整える",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo",
+      "partner"
+    ],
+    "energy": "low",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "毎日何時間も使うものなので、少し変えるだけで効果が長く続く。",
+    "first_step": "今使っている枕とパジャマを並べて、いちばん不満な1点を書き出す。",
+    "link": null
+  },
+  {
+    "id": "act_255",
+    "name": "子どもが寝たあとの時間を自分だけのために使う",
+    "category": "rest",
+    "indoor": true,
+    "with": [
+      "solo"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "家族と過ごす一日とは別に、誰にも中断されない時間が少しあるだけで持ち直せる。",
+    "first_step": "やりたいことを1つだけ決めて、始める前に洗い物と明日の支度を終わらせる。",
+    "link": null
+  },
+  {
+    "id": "act_256",
+    "name": "親や祖父母を誘って一緒に出かける",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      180,
+      300
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "自分から誘う機会は意外と少ないぶん、声をかけると思った以上に喜ばれる。",
+    "first_step": "無理なく歩ける距離の行き先を1つ選んで、都合のいい日を電話で聞く。",
+    "link": null
+  },
+  {
+    "id": "act_257",
+    "name": "子どもがいま夢中なことに一日とことん付き合う",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "こちらが予定を決めない日は、子どもの口から出てくる話がいつもより増える。",
+    "first_step": "今いちばんやりたいことを子どもに聞いて、その通りに一日を組む。",
+    "link": null
+  },
+  {
+    "id": "act_258",
+    "name": "家族で昔の写真やホームビデオを見返す",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "当時の話を聞きながら見ると、自分が覚えていない出来事のほうが多いと気づく。",
+    "first_step": "古いアルバムか動画のデータを1年分だけ選んで、再生できるようにする。",
+    "link": null
+  },
+  {
+    "id": "act_259",
+    "name": "親子で参加できるワークショップに申し込む",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "教える役の人が別にいるので、親のほうも参加者として一緒に楽しめる。",
+    "first_step": "対象年齢に合う親子向けの体験教室を探して、空いている回に申し込む。",
+    "link": null
+  },
+  {
+    "id": "act_260",
+    "name": "日帰りで少し遠くの街まで出かける",
+    "category": "social",
+    "indoor": false,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "medium",
+    "minutes": [
+      300,
+      480
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "移動している時間そのものが話す時間になるので、近場で会うのとは密度が違う。",
+    "first_step": "片道2時間以内で行ける街を1つ選んで、往復の乗り物の時間を調べる。",
+    "link": null
+  },
+  {
+    "id": "act_261",
+    "name": "記念日や誕生日をいつもより特別に祝う",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "毎年来る日でも、ちゃんと祝った年のことだけはあとから思い出せる。",
+    "first_step": "祝いたい相手を決めて、食事の場所か贈り物のどちらかを先に押さえる。",
+    "link": null
+  },
+  {
+    "id": "act_262",
+    "name": "離れた場所にいる友人と同じ映画を同時に見る",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "low",
+    "minutes": [
+      120,
+      180
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "同じ場面で笑ったり驚いたりできるので、離れていても一緒に観た記憶が残る。",
+    "first_step": "観る作品と開始時刻を決めて、通話をつないだままにできるか確かめる。",
+    "link": null
+  },
+  {
+    "id": "act_263",
+    "name": "友人同士で得意料理を教え合う",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "人に教えるために手順を言葉にすると、自分の作り方の癖にも気づける。",
+    "first_step": "いちばん作り慣れている料理を1つ決めて、材料を人数分そろえる。",
+    "link": null
+  },
+  {
+    "id": "act_264",
+    "name": "家族で次の休みの計画をあれこれ立てる",
+    "category": "social",
+    "indoor": true,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "結局決まらなくても、行きたい場所を言い合っている時間そのものが楽しい。",
+    "first_step": "地図を広げて、それぞれが行ってみたい場所を1つずつ挙げてみる。",
+    "link": null
+  },
+  {
+    "id": "act_265",
+    "name": "家族でボードゲームやカードゲームを囲む",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "partner",
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "画面を見ないで遊べるので、勝ち負けより相手の顔を見ている時間が長くなる。",
+    "first_step": "家にあるゲームを出すか、年齢の幅に合う1本を選んで買っておく。",
+    "link": null
+  },
+  {
+    "id": "act_266",
+    "name": "斧投げ(アックススローイング)に挑戦する",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "partner",
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      90
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "力任せでは刺さらず、型が決まったときだけ的に決まるのが思いのほか奥深い。",
+    "first_step": "初心者向けの指導がつく施設を探して、参加できる年齢と服装を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_267",
+    "name": "屋内の遊び場で子どもと体を動かして遊ぶ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "天気に左右されないので、外に出られない日の逃げ場として覚えておくと助かる。",
+    "first_step": "大型の屋内遊具がある施設を探して、対象年齢と料金を確認する。",
+    "link": null
+  },
+  {
+    "id": "act_268",
+    "name": "サバイバルゲームやレーザータグでチーム戦をする",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "friends"
+    ],
+    "energy": "high",
+    "minutes": [
+      120,
+      240
+    ],
+    "budget": "unlimited",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": true,
+    "pitch": "作戦を立てて動く時間が長いので、運動が得意でなくても役割が見つかる。",
+    "first_step": "装備を貸してもらえる初心者向けのフィールドを探して、人数を集める。",
+    "link": null
+  },
+  {
+    "id": "act_269",
+    "name": "行き先を決めずに電車に乗って途中下車する",
+    "category": "play",
+    "indoor": false,
+    "with": [
+      "solo",
+      "partner",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      180,
+      360
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "降りる駅を決めないだけで、いつもの路線が知らない土地のように感じられる。",
+    "first_step": "普段は降りない駅を1つ決めて、片道分の切符を買って乗り込む。",
+    "link": null
+  },
+  {
+    "id": "act_270",
+    "name": "子どもと水鉄砲や水遊びで涼む",
+    "category": "play",
+    "indoor": false,
+    "with": [
+      "family"
+    ],
+    "energy": "high",
+    "minutes": [
+      60,
+      120
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny"
+    ],
+    "seasons": [
+      "summer"
+    ],
+    "needs_prep": true,
+    "pitch": "濡れてもいいと決めた瞬間から、大人のほうが本気になってしまう遊び。",
+    "first_step": "水鉄砲と着替えを用意して、水を使っていい公園や広場を確かめる。",
+    "link": null
+  },
+  {
+    "id": "act_271",
+    "name": "eスポーツ施設で大きな画面のゲームを遊ぶ",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "solo",
+      "friends"
+    ],
+    "energy": "medium",
+    "minutes": [
+      90,
+      180
+    ],
+    "budget": "under3000",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "家では用意できない画面と音で遊ぶと、慣れたゲームでも別物に感じる。",
+    "first_step": "時間貸しで遊べる施設を探して、遊びたいタイトルがあるか確認する。",
+    "link": null
+  },
+  {
+    "id": "act_272",
+    "name": "家の中に毛布で秘密基地を作って過ごす",
+    "category": "play",
+    "indoor": true,
+    "with": [
+      "family"
+    ],
+    "energy": "low",
+    "minutes": [
+      60,
+      150
+    ],
+    "budget": "free",
+    "weather_ok": [
+      "sunny",
+      "cloudy",
+      "rainy"
+    ],
+    "seasons": [
+      "all"
+    ],
+    "needs_prep": false,
+    "pitch": "布と椅子で作っただけの狭い空間なのに、子どもはそこから出てこなくなる。",
+    "first_step": "使っていない毛布とクッションを集めて、机や椅子に掛けてみる。",
     "link": null
   }
 ]
