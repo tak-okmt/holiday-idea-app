@@ -235,6 +235,7 @@
   - 対応: `next.config.ts`に`outputFileTracingIncludes: { "/*": ["data/**/*"] }`を追加して明示的に含めるようにした。`.next/server/app/page.js.nft.json`に`data/activities.json`が含まれることをローカルビルドで確認済み。
   - 教訓: `readFileSync`等で静的解析できない動的パスのファイルを読む場合、Vercelのようなサーバーレス環境では明示的なトレース設定が必要になる。将来カタログ以外のファイルを実行時に読む機能を追加する場合も同様の対応が要る。
 - **本番(`https://holiday-idea-app.vercel.app`)で動作確認完了**: 質問4問→提案→「違うな」（気分じゃない）→再提案→「これにする！」の一連の流れを実機確認。Jevの採点・再ランキングも本番で正しく動作している。
+- **Supabaseへのログ記録を開発者が確認**: `sessions` / `answers` / `suggestions` / `decisions` の各テーブルに、本番での操作分のログが実際に記録されていることを確認済み。ログ保存・デプロイとも完全に機能している。
 - ロードマップの週末7にチェック。天気連携(Open-Meteo)は計画通り見送り。
 
 <!-- BEGIN:nextjs-agent-rules -->
