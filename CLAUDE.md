@@ -230,6 +230,10 @@
   - 原因: Node 24移行時（週末2〜3の間）に、ローカルの`pnpm exec`/`pnpm run`がVoltaのシムをPATHから除外してしまう問題への対処として`.npmrc`に`use-node-version=24.21.0`を追加していたが、Vercelのビルド環境ではこの設定自体が非対応でビルド即失敗する。
   - 対応: `.npmrc`を削除。`package.json`の`engines.node: ">=24"`（既存）をVercel側が読む想定。
   - 【既知の制約】`.npmrc`を消したことで、ローカルの`pnpm test`/`pnpm build`等は再びHomebrewの古いNode(v23.6.0、これもサポート終了間近)にフォールバックするようになった。動作はするが`engines`の`>=24`は満たしていない。直接`node`コマンドを叩く場合はVolta経由で24.21.0が使われる（プロジェクトの`volta.node`設定は有効なまま）。根本的に揃えるにはHomebrewの`node`を更新する必要があるが、システム全体に影響するため開発者の許可なく実施はしていない。
+- 上記を直した初回デプロイ自体は`Ready`（成功）になったが、実際にアプリを操作すると`Minified React error #441`で落ちた。
+  - 原因: `src/engine/catalog.ts`の`loadCatalog()`が`readFileSync(`${process.cwd()}/data/activities.json`)`のように**動的に組み立てたパス**でファイルを読んでいるため、Next.jsのビルド時ファイルトレース（`@vercel/nft`、Vercelのサーバーレス関数に含めるファイルを自動検出する仕組み）がこれを検出できず、`data/activities.json`が本番のサーバーレス関数に含まれていなかった。
+  - 対応: `next.config.ts`に`outputFileTracingIncludes: { "/*": ["data/**/*"] }`を追加して明示的に含めるようにした。`.next/server/app/page.js.nft.json`に`data/activities.json`が含まれることをローカルビルドで確認済み。
+  - 教訓: `readFileSync`等で静的解析できない動的パスのファイルを読む場合、Vercelのようなサーバーレス環境では明示的なトレース設定が必要になる。将来カタログ以外のファイルを実行時に読む機能を追加する場合も同様の対応が要る。
 
 <!-- BEGIN:nextjs-agent-rules -->
 
