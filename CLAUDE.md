@@ -220,10 +220,16 @@
 - **開発者に依頼したいこと（ここから先は自分では進められない）**:
   1. supabase.comで新規プロジェクトを作成
   2. SQL Editorで`supabase/schema.sql`の内容を実行
-  3. Project Settings > API Keys から Project URL と **Publishable key**（レガシーのanon keyではない）を取得し、`.env.local`に`SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`として設定
+  3. Project URL は **Integrations > Data API**、Publishable key は **Settings > API Keys**（ダッシュボードの構成が変わっており別ページにある。Project URLは`/rest/v1/`を含まない`https://xxxxx.supabase.co`の形で使うこと）から取得し、`.env.local`に`SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`として設定
   4. vercel.comでアカウント作成（未作成の場合）し、`tak-okmt/holiday-idea-app`をインポート
   5. Vercelのプロジェクト設定で環境変数（`TYPESAFE_API_KEY` / `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`）を設定してデプロイ
 - テスト・lint・型チェック・ビルドは全て通過。ロードマップのチェックは、実際にログがSupabaseに書き込めること・Vercelへのデプロイが完了することを確認してから入れる。
+
+### 2026-09-23 Vercelデプロイのトラブルシューティング
+- 初回デプロイが `Error: Detected unsupported "use-node-version" in your ".npmrc". Please use "engines" in your "package.json" instead` で失敗。
+  - 原因: Node 24移行時（週末2〜3の間）に、ローカルの`pnpm exec`/`pnpm run`がVoltaのシムをPATHから除外してしまう問題への対処として`.npmrc`に`use-node-version=24.21.0`を追加していたが、Vercelのビルド環境ではこの設定自体が非対応でビルド即失敗する。
+  - 対応: `.npmrc`を削除。`package.json`の`engines.node: ">=24"`（既存）をVercel側が読む想定。
+  - 【既知の制約】`.npmrc`を消したことで、ローカルの`pnpm test`/`pnpm build`等は再びHomebrewの古いNode(v23.6.0、これもサポート終了間近)にフォールバックするようになった。動作はするが`engines`の`>=24`は満たしていない。直接`node`コマンドを叩く場合はVolta経由で24.21.0が使われる（プロジェクトの`volta.node`設定は有効なまま）。根本的に揃えるにはHomebrewの`node`を更新する必要があるが、システム全体に影響するため開発者の許可なく実施はしていない。
 
 <!-- BEGIN:nextjs-agent-rules -->
 
