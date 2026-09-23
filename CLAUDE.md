@@ -108,7 +108,7 @@
 - [x] 週末4: 「違うな」による再ランキング、評価ケース（`eval/cases.json`）と回帰テスト
 - [x] 週末5: スマホ前提のWeb画面（質問 → 提案 → 違うな）
 - [x] 週末6: pitch / first_step の見直し、カタログを200件へ拡充
-- [ ] 週末7: ログ保存、デプロイ（天気連携は余力があれば）
+- [x] 週末7: ログ保存、デプロイ（天気連携は余力があれば）
 - [ ] 週末8: 友人5〜10人に使ってもらい、ログと感想から次の改善を決める
 
 ## 作業ルール
@@ -234,6 +234,8 @@
   - 原因: `src/engine/catalog.ts`の`loadCatalog()`が`readFileSync(`${process.cwd()}/data/activities.json`)`のように**動的に組み立てたパス**でファイルを読んでいるため、Next.jsのビルド時ファイルトレース（`@vercel/nft`、Vercelのサーバーレス関数に含めるファイルを自動検出する仕組み）がこれを検出できず、`data/activities.json`が本番のサーバーレス関数に含まれていなかった。
   - 対応: `next.config.ts`に`outputFileTracingIncludes: { "/*": ["data/**/*"] }`を追加して明示的に含めるようにした。`.next/server/app/page.js.nft.json`に`data/activities.json`が含まれることをローカルビルドで確認済み。
   - 教訓: `readFileSync`等で静的解析できない動的パスのファイルを読む場合、Vercelのようなサーバーレス環境では明示的なトレース設定が必要になる。将来カタログ以外のファイルを実行時に読む機能を追加する場合も同様の対応が要る。
+- **本番(`https://holiday-idea-app.vercel.app`)で動作確認完了**: 質問4問→提案→「違うな」（気分じゃない）→再提案→「これにする！」の一連の流れを実機確認。Jevの採点・再ランキングも本番で正しく動作している。
+- ロードマップの週末7にチェック。天気連携(Open-Meteo)は計画通り見送り。
 
 <!-- BEGIN:nextjs-agent-rules -->
 
