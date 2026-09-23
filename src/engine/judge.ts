@@ -70,6 +70,7 @@ export class JevJudge implements Judge {
             pitch: c.pitch,
             indoor: c.indoor,
             energy: c.energy,
+            budget: c.budget,
           })),
         },
         questions,
