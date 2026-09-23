@@ -14,6 +14,7 @@
     "catalog:generate": "tsx scripts/generate-catalog.ts",
     "catalog:analyze": "tsx scripts/analyze-catalog.ts",
     "catalog:csv": "tsx scripts/export-catalog-csv.ts",
+    "catalog:coverage": "tsx scripts/evaluate-coverage.ts",
     "eval:jev": "tsx eval/jev-explore.ts",
     "recommend": "tsx scripts/recommend-cli.ts"
   },
